@@ -130,7 +130,8 @@ class ISSLocationSkill(MycroftSkill):
         # Get the axes object from the basemap and add the AnnotationBbox artist
         m._check_ax().add_artist(ab)
 
-        plt.savefig(output, dpi=self.settings["dpi"], bbox_inches='tight')
+        plt.savefig(output, dpi=self.settings["dpi"], bbox_inches='tight',
+                    facecolor="black")
         plt.close()
         return output
 
