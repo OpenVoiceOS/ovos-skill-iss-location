@@ -52,8 +52,6 @@ class ISSLocationSkill(MycroftSkill):
 
                 # reverse geo
                 data = self._session.get(ocean_names, params=params).json()
-                print(data)
-
                 try:
                     toponym = "the " + data['ocean']['name']
                 except:
@@ -68,7 +66,6 @@ class ISSLocationSkill(MycroftSkill):
                         }
                         data = self._session.get(land_names,
                                                  params=params).json()
-                        print(data)
                         toponym = data['countryName']
                     except:
                         toponym = "unknown"
@@ -97,24 +94,28 @@ class ISSLocationSkill(MycroftSkill):
         self.gui.show_page('idle.qml')
 
     def generate_map(self, lat, lon):
+        lat = float(lat)
+        lon = float(lon)
         icon = join(dirname(__file__), self.settings["iss_icon"])
         output = join(tempfile.gettempdir(), "iss.jpg")
+        lat_0 = None
+        lon_0 = None
         if self.settings["center_iss"]:
             lat_0 = lat
             lon_0 = lon
         elif self.settings["center_location"]:
             lat_0 = self.location["coordinate"]["latitude"]
             lon_0 = self.location["coordinate"]["longitude"]
-        else:
-            lat_0=None
-            lon_0=None
+        if self.settings["map_style"] == "cyl":
+            lat_0 = None
+            lon_0 = None
         m = Basemap(projection=self.settings["map_style"],
                     resolution=None, lat_0=lat_0, lon_0=lon_0)
         m.bluemarble()
         x, y = m(lon, lat)
 
-        plane = plt.imread(icon)
-        im = OffsetImage(plane, zoom=self.settings["iss_size"])
+        iss = plt.imread(icon)
+        im = OffsetImage(iss, zoom=self.settings["iss_size"])
         ab = AnnotationBbox(im, (x, y), xycoords='data', frameon=False)
 
         # Get the axes object from the basemap and add the AnnotationBbox artist
