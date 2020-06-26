@@ -17,6 +17,8 @@
   ],
   "examples": [
     "Where is the ISS",
-    "tell me about international space station"
+    "tell me about international space station",
+    "Who is on board of the space station",
+    "how many persons on board of the space station"
   ]
 }

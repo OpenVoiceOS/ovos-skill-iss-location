@@ -9,6 +9,7 @@ from time import sleep
 from requests_cache import CachedSession
 from datetime import timedelta, datetime
 from mtranslate import translate
+from adapt.intent import IntentBuilder
 
 
 class ISSLocationSkill(MycroftSkill):
@@ -36,6 +37,9 @@ class ISSLocationSkill(MycroftSkill):
         try:
             data = self._session.get(
                 "http://api.open-notify.org/iss-now.json").json()
+            astronauts = self._session.get(
+                "http://api.open-notify.org/astros.json").json()
+            self.settings["astronauts"] = astronauts["people"]
             lat = data['iss_position']['latitude']
             lon = data['iss_position']['longitude']
             if not self.settings.get("lat") or \
@@ -86,6 +90,8 @@ class ISSLocationSkill(MycroftSkill):
                               self.settings['toponym']
         self.gui['lat'] = self.settings['lat']
         self.gui['lot'] = self.settings['lon']
+        self.gui["astronauts"] = self.settings["astronauts"]
+        self.set_context("iss")
 
     @resting_screen_handler("ISS")
     def idle(self, message):
@@ -126,9 +132,9 @@ class ISSLocationSkill(MycroftSkill):
 
     @intent_file_handler("about.intent")
     def handle_about_iss_intent(self, message):
-        epic = join(dirname(__file__), "ui", "images", "iss.png")
+        iss = join(dirname(__file__), "ui", "images", "iss.png")
         utterance = self.dialog_renderer.render("about", {})
-        self.gui.show_image(epic, override_idle=True,
+        self.gui.show_image(iss, override_idle=True,
                             fill='PreserveAspectFit', caption=utterance)
         self.speak(utterance, wait=True)
         sleep(1)
@@ -151,6 +157,35 @@ class ISSLocationSkill(MycroftSkill):
                                "longitude":  self.settings['lon'],
                                "toponym":  self.settings['toponym']},
                               wait=True)
+        sleep(1)
+        self.gui.clear()
+
+    @intent_handler(IntentBuilder("WhoISSIntent")
+                    .require("who").require("onboard").require("iss"))
+    def handle_who(self, message):
+        self.update_picture()
+        people = [p["name"] for p in self.settings["astronauts"]
+                  if p["craft"] == "ISS"]
+        people = ", ".join(people)
+        iss = join(dirname(__file__), "ui", "images", "iss.png")
+        self.gui.show_image(iss, override_idle=True,
+                            fill='PreserveAspectFit', caption=people)
+        self.speak_dialog("who", {"people": people}, wait=True)
+        sleep(1)
+        self.gui.clear()
+
+    @intent_handler(IntentBuilder("NumberISSIntent")
+                    .require("how_many").require("onboard").require("iss"))
+    def handle_number(self, message):
+        self.update_picture()
+        people = [p["name"] for p in self.settings["astronauts"]
+                  if p["craft"] == "ISS"]
+        num = len(people)
+        people = ", ".join(people)
+        iss = join(dirname(__file__), "ui", "images", "iss.png")
+        self.gui.show_image(iss, override_idle=True,
+                            fill='PreserveAspectFit', caption=people)
+        self.speak_dialog("number", {"number": num}, wait=True)
         sleep(1)
         self.gui.clear()
 
