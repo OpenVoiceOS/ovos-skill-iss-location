@@ -124,6 +124,16 @@ class ISSLocationSkill(MycroftSkill):
         plt.savefig(output, dpi=self.settings["dpi"], bbox_inches='tight')
         return output
 
+    @intent_file_handler("about.intent")
+    def handle_about_iss_intent(self, message):
+        epic = join(dirname(__file__), "ui", "images", "iss.png")
+        utterance = self.dialog_renderer.render("about", {})
+        self.gui.show_image(epic, override_idle=True,
+                            fill='PreserveAspectFit', caption=utterance)
+        self.speak(utterance, wait=True)
+        sleep(1)
+        self.gui.clear()
+
     @intent_file_handler('where_iss.intent')
     def handle_iss(self, message):
         self.update_picture()
