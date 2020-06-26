@@ -7,7 +7,7 @@ from os.path import join, dirname
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 from time import sleep
 from requests_cache import CachedSession
-from datetime import timedelta, datetime
+from datetime import timedelta
 from mtranslate import translate
 from adapt.intent import IntentBuilder
 
@@ -57,7 +57,7 @@ class ISSLocationSkill(MycroftSkill):
                 # reverse geo
                 data = self._session.get(ocean_names, params=params).json()
                 try:
-                    toponym = "the " + data['ocean']['name']
+                    toponym = "The " + data['ocean']['name']
                 except:
 
                     try:
@@ -86,8 +86,10 @@ class ISSLocationSkill(MycroftSkill):
         except Exception as e:
             self.log.exception(e)
         self.gui['imgLink'] = self.settings['imgLink']
-        self.gui['caption'] = str(datetime.now()) + " " + \
-                              self.settings['toponym']
+        self.gui['caption'] = self.settings['toponym'] + \
+                              " Lat: {lat}  Lon: {lon}".format(
+                                  lat=self.settings["lat"],
+                                  lon=self.settings["lon"])
         self.gui['lat'] = self.settings['lat']
         self.gui['lot'] = self.settings['lon']
         self.gui["astronauts"] = self.settings["astronauts"]
@@ -97,7 +99,8 @@ class ISSLocationSkill(MycroftSkill):
     def idle(self, message):
         self.update_picture()
         self.gui.clear()
-        self.gui.show_page('idle.qml')
+        self.gui.show_image(self.settings['imgLink'],
+                            fill='PreserveAspectFit')
 
     def generate_map(self, lat, lon):
         lat = float(lat)
@@ -128,6 +131,7 @@ class ISSLocationSkill(MycroftSkill):
         m._check_ax().add_artist(ab)
 
         plt.savefig(output, dpi=self.settings["dpi"], bbox_inches='tight')
+        plt.close()
         return output
 
     @intent_file_handler("about.intent")
@@ -154,8 +158,8 @@ class ISSLocationSkill(MycroftSkill):
         else:
             self.speak_dialog("location.current",
                               {"latitude": self.settings['lat'],
-                               "longitude":  self.settings['lon'],
-                               "toponym":  self.settings['toponym']},
+                               "longitude": self.settings['lon'],
+                               "toponym": self.settings['toponym']},
                               wait=True)
         sleep(1)
         self.gui.clear()
