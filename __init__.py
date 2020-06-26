@@ -7,9 +7,10 @@ from os.path import join, dirname
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 from time import sleep
 from requests_cache import CachedSession
-from datetime import timedelta
+from datetime import timedelta, datetime
 from mtranslate import translate
 from adapt.intent import IntentBuilder
+from lingua_franca.format import nice_duration
 
 
 class ISSLocationSkill(MycroftSkill):
@@ -39,6 +40,7 @@ class ISSLocationSkill(MycroftSkill):
                 "http://api.open-notify.org/iss-now.json").json()
             astronauts = self._session.get(
                 "http://api.open-notify.org/astros.json").json()
+
             self.settings["astronauts"] = astronauts["people"]
             lat = data['iss_position']['latitude']
             lon = data['iss_position']['longitude']
@@ -162,6 +164,36 @@ class ISSLocationSkill(MycroftSkill):
                                "longitude": self.settings['lon'],
                                "toponym": self.settings['toponym']},
                               wait=True)
+        sleep(1)
+        self.gui.clear()
+
+    @intent_file_handler('when_iss.intent')
+    def handle_when(self, message):
+        lat = self.location["coordinate"]["latitude"]
+        lon = self.location["coordinate"]["longitude"]
+        if not self.settings.get("passing_by"):
+            params = {"lat": lat, "lon": lon}
+            passing = self._session.get(
+                "http://api.open-notify.org/iss-pass.json",
+                params=params).json()
+            self.settings["passing_by"] = passing["response"]
+
+        next_passage = self.settings["passing_by"][0]
+        ts = next_passage["risetime"]
+        dt = datetime.fromtimestamp(ts)
+        delta = datetime.now() - dt
+        duration = nice_duration(delta, lang=self.lang)
+        caption = self.location_pretty + " " + dt.strftime("%m/%d/%Y, %H:%M:%S")
+        image = self.generate_map(lat, lon)
+
+        self.gui.show_image(image,
+                            caption=caption,
+                            fill='PreserveAspectFit')
+
+        self.speak_dialog("location.when",
+                          {"duration": duration,
+                           "toponym": self.location_pretty},
+                          wait=True)
         sleep(1)
         self.gui.clear()
 
