@@ -1,0 +1,10 @@
+dependencies:
+  python:
+    - requests
+    - pillow
+    - requests-cache
+    - mtranslate
+    - matplotlib
+    - https://github.com/matplotlib/basemap/archive/master.zip
+  system:
+    all: libgeos-dev
