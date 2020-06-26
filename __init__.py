@@ -30,7 +30,7 @@ class ISSLocationSkill(MycroftSkill):
             self.settings["iss_icon"] = "iss3.png"
         if "dpi" not in self.settings:
             self.settings["dpi"] = 500
-        _expire_after = timedelta(minutes=10)
+        _expire_after = timedelta(minutes=5)
         self._session = CachedSession(backend='memory',
                                       expire_after=_expire_after)
 
