@@ -1,0 +1,22 @@
+{
+  "name": "ISS Tracker Skill",
+  "skillname": "skill-iss-location",
+  "authorname": "JarbasSkills",
+  "foldername": "",
+  "url": "https://github.com/JarbasSkills/skill-iss-location",
+  "branch": "master",
+  "desktopFile": false,
+  "warning": "",
+  "systemDeps": false,
+  "platforms": [
+    "arm",
+    "arm64",
+    "i386",
+    "x86_64",
+    "ia64"
+  ],
+  "examples": [
+    "foo",
+    "bahr"
+  ]
+}
