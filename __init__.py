@@ -1,21 +1,23 @@
-from mycroft import MycroftSkill, intent_file_handler, intent_handler
-from mycroft.skills.core import resting_screen_handler
-import matplotlib.pyplot as plt
-from mpl_toolkits.basemap import Basemap
 import tempfile
-from os.path import join, dirname
-from matplotlib.offsetbox import OffsetImage, AnnotationBbox
-from time import sleep
-from requests_cache import CachedSession
 from datetime import timedelta, datetime
-from mtranslate import translate
-from adapt.intent import IntentBuilder
+from os.path import join, dirname
+from time import sleep
+
+import matplotlib.pyplot as plt
 from lingua_franca.format import nice_duration
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+from mpl_toolkits.basemap import Basemap
+from ovos_workshop.decorators import intent_handler
+from ovos_workshop.decorators import resting_screen_handler
+from ovos_workshop.intents import IntentBuilder
+from ovos_workshop.skills import OVOSSkill
+from requests_cache import CachedSession
 
 
-class ISSLocationSkill(MycroftSkill):
-    def __init__(self):
-        super(ISSLocationSkill, self).__init__(name="I S S Location Skill")
+class ISSLocationSkill(OVOSSkill):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         if "geonames_user" not in self.settings:
             self.settings["geonames_user"] = "jarbas"
         if "map_style" not in self.settings:
@@ -77,7 +79,7 @@ class ISSLocationSkill(MycroftSkill):
                         toponym = "unknown"
                 if not self.lang.lower().startswith("en") and \
                         toponym != "unknown":
-                    toponym = translate(toponym, self.lang)
+                    toponym = self.translator.translate(toponym, self.lang)
                 self.settings['toponym'] = toponym
                 image = self.generate_map(lat, lon)
 
@@ -101,8 +103,7 @@ class ISSLocationSkill(MycroftSkill):
     def idle(self, message):
         self.update_picture()
         self.gui.clear()
-        self.gui.show_image(self.settings['imgLink'],
-                            fill='PreserveAspectFit')
+        self.gui.show_image(self.settings['imgLink'], fill='PreserveAspectFit')
 
     def generate_map(self, lat, lon):
         lat = float(lat)
@@ -121,7 +122,9 @@ class ISSLocationSkill(MycroftSkill):
             lat_0 = None
             lon_0 = None
         m = Basemap(projection=self.settings["map_style"],
-                    resolution=None, lat_0=lat_0, lon_0=lon_0)
+                    resolution=None,
+                    lat_0=lat_0,
+                    lon_0=lon_0)
         m.bluemarble()
         x, y = m(lon, lat)
 
@@ -132,42 +135,48 @@ class ISSLocationSkill(MycroftSkill):
         # Get the axes object from the basemap and add the AnnotationBbox artist
         m._check_ax().add_artist(ab)
 
-        plt.savefig(output, dpi=self.settings["dpi"], bbox_inches='tight',
+        plt.savefig(output,
+                    dpi=self.settings["dpi"],
+                    bbox_inches='tight',
                     facecolor="black")
         plt.close()
         return output
 
-    @intent_file_handler("about.intent")
+    @intent_handler("about.intent")
     def handle_about_iss_intent(self, message):
         iss = join(dirname(__file__), "ui", "images", "iss.png")
         utterance = self.dialog_renderer.render("about", {})
-        self.gui.show_image(iss, override_idle=True,
-                            fill='PreserveAspectFit', caption=utterance)
+        self.gui.show_image(iss,
+                            override_idle=True,
+                            fill='PreserveAspectFit',
+                            caption=utterance)
         self.speak(utterance, wait=True)
         sleep(1)
         self.gui.clear()
 
-    @intent_file_handler('where_iss.intent')
+    @intent_handler('where_iss.intent')
     def handle_iss(self, message):
         self.update_picture()
         self.gui.show_image(self.settings['imgLink'],
                             caption=self.gui['caption'],
                             fill='PreserveAspectFit')
         if self.settings['toponym'] == "unknown":
-            self.speak_dialog("location.unknown",
-                              {"latitude": self.settings['lat'],
-                               "longitude": self.settings['lon']},
+            self.speak_dialog("location.unknown", {
+                "latitude": self.settings['lat'],
+                "longitude": self.settings['lon']
+            },
                               wait=True)
         else:
-            self.speak_dialog("location.current",
-                              {"latitude": self.settings['lat'],
-                               "longitude": self.settings['lon'],
-                               "toponym": self.settings['toponym']},
+            self.speak_dialog("location.current", {
+                "latitude": self.settings['lat'],
+                "longitude": self.settings['lon'],
+                "toponym": self.settings['toponym']
+            },
                               wait=True)
         sleep(1)
         self.gui.clear()
 
-    @intent_file_handler('when_iss.intent')
+    @intent_handler('when_iss.intent')
     def handle_when(self, message):
         lat = self.location["coordinate"]["latitude"]
         lon = self.location["coordinate"]["longitude"]
@@ -183,49 +192,55 @@ class ISSLocationSkill(MycroftSkill):
         dt = datetime.fromtimestamp(ts)
         delta = datetime.now() - dt
         duration = nice_duration(delta, lang=self.lang)
-        caption = self.location_pretty + " " + dt.strftime("%m/%d/%Y, %H:%M:%S")
+        caption = self.location_pretty + " " + dt.strftime(
+            "%m/%d/%Y, %H:%M:%S")
         image = self.generate_map(lat, lon)
 
-        self.gui.show_image(image,
-                            caption=caption,
-                            fill='PreserveAspectFit')
+        self.gui.show_image(image, caption=caption, fill='PreserveAspectFit')
 
-        self.speak_dialog("location.when",
-                          {"duration": duration,
-                           "toponym": self.location_pretty},
+        self.speak_dialog("location.when", {
+            "duration": duration,
+            "toponym": self.location_pretty
+        },
                           wait=True)
         sleep(1)
         self.gui.clear()
 
-    @intent_handler(IntentBuilder("WhoISSIntent")
-                    .require("who").require("onboard").require("iss"))
+    @intent_handler(
+        IntentBuilder("WhoISSIntent").require("who").require(
+            "onboard").require("iss"))
     def handle_who(self, message):
         self.update_picture()
-        people = [p["name"] for p in self.settings["astronauts"]
-                  if p["craft"] == "ISS"]
+        people = [
+            p["name"] for p in self.settings["astronauts"]
+            if p["craft"] == "ISS"
+        ]
         people = ", ".join(people)
         iss = join(dirname(__file__), "ui", "images", "iss.png")
-        self.gui.show_image(iss, override_idle=True,
-                            fill='PreserveAspectFit', caption=people)
+        self.gui.show_image(iss,
+                            override_idle=True,
+                            fill='PreserveAspectFit',
+                            caption=people)
         self.speak_dialog("who", {"people": people}, wait=True)
         sleep(1)
         self.gui.clear()
 
-    @intent_handler(IntentBuilder("NumberISSIntent")
-                    .require("how_many").require("onboard").require("iss"))
+    @intent_handler(
+        IntentBuilder("NumberISSIntent").require("how_many").require(
+            "onboard").require("iss"))
     def handle_number(self, message):
         self.update_picture()
-        people = [p["name"] for p in self.settings["astronauts"]
-                  if p["craft"] == "ISS"]
+        people = [
+            p["name"] for p in self.settings["astronauts"]
+            if p["craft"] == "ISS"
+        ]
         num = len(people)
         people = ", ".join(people)
         iss = join(dirname(__file__), "ui", "images", "iss.png")
-        self.gui.show_image(iss, override_idle=True,
-                            fill='PreserveAspectFit', caption=people)
+        self.gui.show_image(iss,
+                            override_idle=True,
+                            fill='PreserveAspectFit',
+                            caption=people)
         self.speak_dialog("number", {"number": num}, wait=True)
         sleep(1)
         self.gui.clear()
-
-
-def create_skill():
-    return ISSLocationSkill()
