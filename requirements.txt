@@ -2,3 +2,4 @@ matplotlib
 basemap
 pillow
 requests
+skyfield
