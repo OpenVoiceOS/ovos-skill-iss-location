@@ -2,4 +2,3 @@ matplotlib
 basemap
 pillow
 requests
-requests-cache
