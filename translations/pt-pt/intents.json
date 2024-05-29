@@ -9,10 +9,10 @@
     "onde está a I S S",
     "onde anda a estação espacial",
     "onde (está|anda) a estação espacial internacional",
-    null,
-    null,
+    "localização da estação espacial internacional",
+    "localização da estação espacial",
     "localização da I S S",
-    null
+    "Localização I S S"
   ],
   "about.intent": [
     "(fala|diz-me|conta-me|) sobre a ISS",
