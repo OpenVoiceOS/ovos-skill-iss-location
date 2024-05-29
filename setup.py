@@ -6,7 +6,7 @@ import os
 
 # Define package information
 SKILL_CLAZZ = "ISSLocationSkill"  # Make sure it matches __init__.py class name
-VERSION = "0.1.0a2"
+VERSION = "0.1.0a3"
 URL = "https://github.com/OpenVoiceOS/ovos-skill-iss-location"
 AUTHOR = "OpenVoiceOS"
 EMAIL = "jarbasai@mailfence.com"

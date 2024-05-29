@@ -78,7 +78,8 @@ class ISSLocationSkill(OVOSSkill):
             self.gui['imgLink'] = image
             self.gui['caption'] = f"{toponym} Lat: {lat}  Lon: {lon}"
             self.gui['lat'] = lat
-            self.gui['lot'] = lon
+            self.gui['lon'] = lon
+            self.gui['toponym'] = toponym
             self.gui["astronauts"] = astronauts["people"]
             self.set_context("iss")
         except Exception as e:
@@ -154,9 +155,10 @@ class ISSLocationSkill(OVOSSkill):
                 "toponym": self.gui['toponym']
             }, wait=True)
         sleep(1)
-        self.gui.clear()
+        self.gui.release()
 
-    @intent_handler('when_iss.intent')
+    # TODO - api has been deprecated, find replacement
+    #@intent_handler('when_iss.intent')
     def handle_when(self, message):
         lat = self.location["coordinate"]["latitude"]
         lon = self.location["coordinate"]["longitude"]
@@ -180,7 +182,7 @@ class ISSLocationSkill(OVOSSkill):
             "toponym": self.location_pretty
         }, wait=True)
         sleep(1)
-        self.gui.clear()
+        self.gui.release()
 
     @intent_handler(
         IntentBuilder("WhoISSIntent").require("who").require(
@@ -198,7 +200,7 @@ class ISSLocationSkill(OVOSSkill):
                             caption=people)
         self.speak_dialog("who", {"people": people}, wait=True)
         sleep(1)
-        self.gui.clear()
+        self.gui.release()
 
     @intent_handler(
         IntentBuilder("NumberISSIntent").require("how_many").require(
@@ -217,11 +219,26 @@ class ISSLocationSkill(OVOSSkill):
                             caption=people)
         self.speak_dialog("number", {"number": num}, wait=True)
         sleep(1)
-        self.gui.clear()
+        self.gui.release()
 
 
 if __name__ == "__main__":
     from ovos_utils.fakebus import FakeBus
+    from ovos_bus_client.message import Message
+
+    # print speak for debugging
+    def spk(utt, *args, **kwargs):
+        print(utt)
 
     s = ISSLocationSkill(skill_id="fake.test", bus=FakeBus())
-    s.update_picture()
+    # s.update_picture()
+    s.speak = spk
+
+    s.handle_number(Message(""))
+    # there are 7 persons on board of the international space station
+    s.handle_who(Message(""))
+    # Jasmin Moghbeli, Andreas Mogensen, Satoshi Furukawa, Konstantin Borisov, Oleg Kononenko, Nikolai Chub, Loral O'Hara are in orbit on board of the space station
+    s.handle_iss(Message(""))
+    # The international space station is now over Central African Republic at 8.6270 latitude 21.5912 longitude
+    s.handle_about_iss_intent(Message(""))
+    # The International Space Station is a modular space station in low Earth orbit. The ISS programme is a multi-national collaborative project between five participating space agencies: NASA ( United States ) , Roscosmos ( Russia ) , JAXA ( Japan ) , ESA ( Europe ) , and CSA ( Canada ) .The ownership and use of the space station is established by intergovernmental treaties and agreements.
