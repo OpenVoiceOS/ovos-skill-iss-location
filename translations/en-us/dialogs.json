@@ -3,37 +3,41 @@
         "The International Space Station is a modular space station in low Earth orbit. The ISS programme is a multi-national collaborative project between five participating space agencies: NASA (United States), Roscosmos (Russia), JAXA (Japan), ESA (Europe), and CSA (Canada).The ownership and use of the space station is established by intergovernmental treaties and agreements."
     ],
     "location.unknown.dialog": [
-        "The space station is at {latitude} latitude {longitude} longitude but I don't know where this is",
-        "The ISS is now over {latitude} latitude {longitude} longitude but there is no associated geographic feature"
+        "The ISS is now over {latitude} latitude {longitude} longitude but there is no associated geographic feature",
+        "The space station is at {latitude} latitude {longitude} longitude but I don't know where this is"
     ],
     "number.dialog": [
-        "{number} persons are on board of the international space station",
-        "{number} persons are on board of the space station",
-        "{number} persons are on board of the I S S",
-        "{number} persons are in orbit on board of the space station",
+        "there are {number} persons in orbit on board of the space station",
+        "there are {number} persons on board of the I S S",
         "there are {number} persons on board of the international space station",
         "there are {number} persons on board of the space station",
-        "there are {number} persons on board of the I S S",
-        "there are {number} persons in orbit on board of the space station"
+        "{number} persons are in orbit on board of the space station",
+        "{number} persons are on board of the I S S",
+        "{number} persons are on board of the international space station",
+        "{number} persons are on board of the space station"
+    ],
+    "visible_for.dialog": [
+        "It will be visible for {duration}",
+        "You will be able to see it for {duration}"
     ],
     "location.when.dialog": [
         "The I S S will be over {toponym} in {duration}",
-        "The space station will be at {toponym} in {duration}",
-        "The international space station will be at {toponym} in {duration}"
+        "The international space station will be at {toponym} in {duration}",
+        "The space station will be at {toponym} in {duration}"
     ],
     "who.dialog": [
-        "{people} are on board of the international space station",
-        "{people} are on board of the space station",
-        "{people} are on board of the I S S",
-        "{people} are in orbit on board of the space station",
         "the following people are on board of the international space station, {people}",
-        "the following persons are on board of the international space station, {people}"
+        "the following persons are on board of the international space station, {people}",
+        "{people} are in orbit on board of the space station",
+        "{people} are on board of the I S S",
+        "{people} are on board of the international space station",
+        "{people} are on board of the space station"
     ],
     "location.current.dialog": [
-        "The I S S is over {latitude} latitude {longitude} longitude which corresponds to {toponym}",
-        "The space station is at {latitude} latitude {longitude} longitude over {toponym}",
         "It's at {latitude} latitude {longitude} longitude, over {toponym}",
+        "Over {toponym} at {latitude} latitude and {longitude} longitude",
+        "The I S S is over {latitude} latitude {longitude} longitude which corresponds to {toponym}",
         "The international space station is now over {toponym} at {latitude} latitude {longitude} longitude",
-        "Over {toponym} at {latitude} latitude and {longitude} longitude"
+        "The space station is at {latitude} latitude {longitude} longitude over {toponym}"
     ]
 }

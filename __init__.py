@@ -9,7 +9,7 @@ import requests
 from lingua_franca.format import nice_duration
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 from mpl_toolkits.basemap import Basemap
-from ovos_utils.time import to_local
+from ovos_utils.time import to_local, now_local
 from ovos_workshop.decorators import intent_handler
 from ovos_workshop.decorators import resting_screen_handler
 from ovos_workshop.intents import IntentBuilder
@@ -168,8 +168,10 @@ class ISSLocationSkill(OVOSSkill):
         pred = SatellitePredictions(lat, lon, altitude=0, days=1).predict()
         dt = pred["rise"]["time"]  # in user timezone
         delta = pred["length"]
+        dur = dt - now_local()
 
-        duration = nice_duration(delta, lang=self.lang)
+        duration = nice_duration(dur, lang=self.lang)
+        visible_dur = nice_duration(delta, lang=self.lang)
         caption = self.location_pretty + " " + dt.strftime("%m/%d/%Y, %H:%M:%S")
         image = self.generate_map(lat, lon)
 
@@ -179,7 +181,9 @@ class ISSLocationSkill(OVOSSkill):
             "duration": duration,
             "toponym": self.location_pretty
         }, wait=True)
-        sleep(1)
+        self.speak_dialog("visible_for", {
+            "duration": visible_dur
+        }, wait=True)
         self.gui.release()
 
     @intent_handler(
@@ -352,5 +356,6 @@ if __name__ == "__main__":
     # The international space station is now over Central African Republic at 8.6270 latitude 21.5912 longitude
     s.handle_when(Message(""))
     # The I S S will be over XXX in seven minutes twenty five seconds
+    # It will be visible during seven minutes twenty five seconds
     s.handle_about_iss_intent(Message(""))
     # The International Space Station is a modular space station in low Earth orbit. The ISS programme is a multi-national collaborative project between five participating space agencies: NASA ( United States ) , Roscosmos ( Russia ) , JAXA ( Japan ) , ESA ( Europe ) , and CSA ( Canada ) .The ownership and use of the space station is established by intergovernmental treaties and agreements.
