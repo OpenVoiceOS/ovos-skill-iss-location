@@ -1,0 +1,39 @@
+{
+  "about.dialog": [
+    "A Estação Espacial Internacional é uma estação espacial modular em órbita baixa da Terra. O programa ISS é um projeto colaborativo multinacional entre cinco agências espaciais participantes: NASA (Estados Unidos), Roscosmos (Rússia), JAXA (Japão), ESA (Europa) e CSA (Canadá). A estação é estabelecida por tratados e acordos intergovernamentais."
+  ],
+  "location.unknown.dialog": [
+    "A estação espacial está em {latitude} latitude {longitude} longitude, mas não sei onde isso fica",
+    "A ISS está agora acima de {latitude} latitude {longitude} longitude, mas não há nenhuma característica geográfica associada"
+  ],
+  "number.dialog": [
+    "{number} pessoas estão a bordo da estação espacial internacional",
+    "{number} pessoas estão a bordo da estação espacial",
+    "{number} pessoas estão a bordo da I S S",
+    "{number} pessoas estão em órbita a bordo da estação espacial",
+    "há {number} pessoas a bordo da estação espacial internacional",
+    "há {number} pessoas a bordo da estação espacial",
+    "há {number} pessoas a bordo da I S S",
+    "há {number} pessoas em órbita a bordo da estação espacial"
+  ],
+  "location.when.dialog": [
+    "A I S S vai estar em {toponym} dentro de {duration}",
+    "A estação espacial estará em {toponym} em {duration}",
+    "A estação espacial internacional estará em {toponym} em {duration}"
+  ],
+  "who.dialog": [
+    "{people} estão a bordo da estação espacial internacional",
+    "{people} estão na estação espacial",
+    "{people} estão a bordo da I S S",
+    "{people} estão em órbita a bordo da estação espacial",
+    "as seguintes pessoas estão a bordo da estação espacial internacional, {people}",
+    "[UNUSED]"
+  ],
+  "location.current.dialog": [
+    "A I S S está acima de {latitude} latitude {longitude} longitude que corresponde a {toponym}",
+    "A estação espacial está em {latitude} latitude {longitude} longitude sobre {toponym}",
+    "Fica a {latitude} latitude {longitude} longitude, sobre {toponym}",
+    "A estação espacial internacional está agora sobre {toponym} em {latitude} latitude {longitude} longitude",
+    "Sobre {toponym} em {latitude} latitude e {longitude} longitude"
+  ]
+}
