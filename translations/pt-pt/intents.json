@@ -1,0 +1,27 @@
+{
+  "when_iss.intent": [
+    "quando vai passar a I S S",
+    "quando vai passar a estação espacial",
+    "quando vai passar a  estação espacial internacional",
+    "a estação espacial internacional passa quando"
+  ],
+  "where_iss.intent": [
+    "onde está a I S S",
+    "onde anda a estação espacial",
+    "onde (está|anda) a estação espacial internacional",
+    null,
+    null,
+    "localização da I S S",
+    null
+  ],
+  "about.intent": [
+    "(fala|diz-me|conta-me|) sobre a ISS",
+    "(fala|diz-me|conta-me|) sobre a estação espacial (internacional|)",
+    "(fale|diga-me|conte-me|) sobre a estação espacial (internacional|)",
+    "o que é (a|) ISS",
+    "[UNUSED]",
+    "[UNUSED]",
+    "[UNUSED]",
+    "[UNUSED]"
+  ]
+}
