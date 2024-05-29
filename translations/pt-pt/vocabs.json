@@ -1,25 +1,25 @@
 {
   "how_many.voc": [
     "quantas",
-    null,
-    null
+    "número",
+    "total"
   ],
   "onboard.voc": [
-    null,
+    "a bordo",
     "(da|na)",
-    null,
+    "a bordo",
     "a ficar"
   ],
   "who.voc": [
-    null,
-    null,
-    null,
-    null
+    "Quem",
+    "pessoa",
+    "pessoas",
+    "pessoas"
   ],
   "iss.voc": [
-    null,
+    "ISS",
     "I S S",
-    null,
-    null
+    "estação Espacial",
+    "estação Espacial Internacional"
   ]
 }
