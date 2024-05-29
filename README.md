@@ -1,4 +1,4 @@
-# <img src='./iss2.png' width='50' height='50' style='vertical-align:bottom'/> ISS Tracker
+# <img src='./ui/iss2.png' width='50' height='50' style='vertical-align:bottom'/> ISS Tracker
 
 
 ## About
