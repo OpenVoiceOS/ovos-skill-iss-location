@@ -94,7 +94,6 @@ class ISSLocationSkill(OVOSSkill):
     def generate_map(self, lat, lon):
         lat = float(lat)
         lon = float(lon)
-        icon = join(dirname(__file__), self.settings["iss_icon"])
         output = join(tempfile.gettempdir(), "iss.jpg")
         lat_0 = None
         lon_0 = None
@@ -114,7 +113,7 @@ class ISSLocationSkill(OVOSSkill):
         m.bluemarble()
         x, y = m(lon, lat)
 
-        iss = plt.imread(icon)
+        iss = plt.imread(self.settings["iss_icon"])
         im = OffsetImage(iss, zoom=self.settings["iss_size"])
         ab = AnnotationBbox(im, (x, y), xycoords='data', frameon=False)
 
