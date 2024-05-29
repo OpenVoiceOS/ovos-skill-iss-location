@@ -29,77 +29,67 @@ class ISSLocationSkill(OVOSSkill):
         if "iss_size" not in self.settings:
             self.settings["iss_size"] = 0.5
         if "iss_icon" not in self.settings:
-            self.settings["iss_icon"] = "iss3.png"
+            self.settings["iss_icon"] = f"{self.root_dir}/ui/iss3.png"
+        if "iss_bg" not in self.settings:
+            self.settings["iss_bg"] = f"{self.root_dir}/ui/iss.png"
         if "dpi" not in self.settings:
             self.settings["dpi"] = 500
 
     def update_picture(self):
         try:
-            data = requests.get(
-                "http://api.open-notify.org/iss-now.json").json()
-            astronauts = requests.get(
-                "http://api.open-notify.org/astros.json").json()
+            data = requests.get("http://api.open-notify.org/iss-now.json").json()
+            astronauts = requests.get("http://api.open-notify.org/astros.json").json()
 
-            self.settings["astronauts"] = astronauts["people"]
             lat = data['iss_position']['latitude']
             lon = data['iss_position']['longitude']
-            if not self.settings.get("lat") or \
-                    not self.settings.get("lon") or \
-                    lat != self.settings['lat'] or \
-                    lon != self.settings['lon']:
-                params = {
-                    "username": self.settings["geonames_user"],
-                    "lat": lat,
-                    "lng": lon
-                }
-                ocean_names = "http://api.geonames.org/oceanJSON"
-                land_names = "http://api.geonames.org/countryCodeJSON"
 
-                # reverse geo
-                data = requests.get(ocean_names, params=params).json()
+            params = {
+                "username": self.settings["geonames_user"],
+                "lat": lat,
+                "lng": lon
+            }
+            ocean_names = "http://api.geonames.org/oceanJSON"
+            land_names = "http://api.geonames.org/countryCodeJSON"
+
+            # reverse geo
+            data = requests.get(ocean_names, params=params).json()
+            try:
+                toponym = "The " + data['ocean']['name']
+            except:
+
                 try:
-                    toponym = "The " + data['ocean']['name']
+                    params = {
+                        "username": self.settings["geonames_user"],
+                        "lat": lat,
+                        "lng": lon,
+                        "formatted": True,
+                        "style": "full"
+                    }
+                    data = requests.get(land_names,
+                                        params=params).json()
+                    toponym = data['countryName']
                 except:
+                    toponym = "unknown"
+            if not self.lang.lower().startswith("en") and toponym != "unknown":
+                toponym = self.translator.translate(toponym, self.lang)
 
-                    try:
-                        params = {
-                            "username": self.settings["geonames_user"],
-                            "lat": lat,
-                            "lng": lon,
-                            "formatted": True,
-                            "style": "full"
-                        }
-                        data = requests.get(land_names,
-                                            params=params).json()
-                        toponym = data['countryName']
-                    except:
-                        toponym = "unknown"
-                if not self.lang.lower().startswith("en") and toponym != "unknown":
-                    toponym = self.translator.translate(toponym, self.lang)
-                self.settings['toponym'] = toponym
-                image = self.generate_map(lat, lon)
+            image = self.generate_map(lat, lon)
 
-                self.settings['lat'] = lat
-                self.settings['lon'] = lon
-                self.settings['imgLink'] = image
-
+            self.gui['imgLink'] = image
+            self.gui['caption'] = f"{toponym} Lat: {lat}  Lon: {lon}"
+            self.gui['lat'] = lat
+            self.gui['lot'] = lon
+            self.gui["astronauts"] = astronauts["people"]
+            self.set_context("iss")
+            return image
         except Exception as e:
             self.log.exception(e)
-        self.gui['imgLink'] = self.settings['imgLink']
-        self.gui['caption'] = self.settings['toponym'] + \
-                              " Lat: {lat}  Lon: {lon}".format(
-                                  lat=self.settings["lat"],
-                                  lon=self.settings["lon"])
-        self.gui['lat'] = self.settings['lat']
-        self.gui['lot'] = self.settings['lon']
-        self.gui["astronauts"] = self.settings["astronauts"]
-        self.set_context("iss")
 
     @resting_screen_handler("ISS")
     def idle(self, message):
-        self.update_picture()
+        self.update_picture()  # values available in self.gui
         self.gui.clear()
-        self.gui.show_image(self.settings['imgLink'], fill='PreserveAspectFit')
+        self.gui.show_image(self.gui['imgLink'], fill='PreserveAspectFit')
 
     def generate_map(self, lat, lon):
         lat = float(lat)
@@ -140,9 +130,8 @@ class ISSLocationSkill(OVOSSkill):
 
     @intent_handler("about.intent")
     def handle_about_iss_intent(self, message):
-        iss = join(dirname(__file__), "ui", "images", "iss.png")
         utterance = self.dialog_renderer.render("about", {})
-        self.gui.show_image(iss,
+        self.gui.show_image(self.settings["iss_bg"],
                             override_idle=True,
                             fill='PreserveAspectFit',
                             caption=utterance)
@@ -152,23 +141,21 @@ class ISSLocationSkill(OVOSSkill):
 
     @intent_handler('where_iss.intent')
     def handle_iss(self, message):
-        self.update_picture()
-        self.gui.show_image(self.settings['imgLink'],
+        self.update_picture()  # values available in self.gui
+        self.gui.show_image(self.gui['imgLink'],
                             caption=self.gui['caption'],
                             fill='PreserveAspectFit')
-        if self.settings['toponym'] == "unknown":
+        if self.gui['toponym'] == "unknown":
             self.speak_dialog("location.unknown", {
-                "latitude": self.settings['lat'],
-                "longitude": self.settings['lon']
-            },
-                              wait=True)
+                "latitude": self.gui['lat'],
+                "longitude": self.gui['lon']
+            }, wait=True)
         else:
             self.speak_dialog("location.current", {
-                "latitude": self.settings['lat'],
-                "longitude": self.settings['lon'],
-                "toponym": self.settings['toponym']
-            },
-                              wait=True)
+                "latitude": self.gui['lat'],
+                "longitude": self.gui['lon'],
+                "toponym": self.gui['toponym']
+            }, wait=True)
         sleep(1)
         self.gui.clear()
 
@@ -176,14 +163,11 @@ class ISSLocationSkill(OVOSSkill):
     def handle_when(self, message):
         lat = self.location["coordinate"]["latitude"]
         lon = self.location["coordinate"]["longitude"]
-        if not self.settings.get("passing_by"):
-            params = {"lat": lat, "lon": lon}
-            passing = requests.get(
-                "http://api.open-notify.org/iss-pass.json",
-                params=params).json()
-            self.settings["passing_by"] = passing["response"]
+        params = {"lat": lat, "lon": lon}
+        passing = requests.get("http://api.open-notify.org/iss-pass.json",
+                               params=params).json()
 
-        next_passage = self.settings["passing_by"][0]
+        next_passage = passing["response"][0]
         ts = next_passage["risetime"]
         dt = datetime.fromtimestamp(ts)
         delta = datetime.now() - dt
@@ -197,8 +181,7 @@ class ISSLocationSkill(OVOSSkill):
         self.speak_dialog("location.when", {
             "duration": duration,
             "toponym": self.location_pretty
-        },
-                          wait=True)
+        }, wait=True)
         sleep(1)
         self.gui.clear()
 
@@ -206,14 +189,13 @@ class ISSLocationSkill(OVOSSkill):
         IntentBuilder("WhoISSIntent").require("who").require(
             "onboard").require("iss"))
     def handle_who(self, message):
-        self.update_picture()
+        self.update_picture()  # values available in self.gui
         people = [
-            p["name"] for p in self.settings["astronauts"]
+            p["name"] for p in self.gui["astronauts"]
             if p["craft"] == "ISS"
         ]
         people = ", ".join(people)
-        iss = join(dirname(__file__), "ui", "images", "iss.png")
-        self.gui.show_image(iss,
+        self.gui.show_image(self.settings["iss_bg"],
                             override_idle=True,
                             fill='PreserveAspectFit',
                             caption=people)
@@ -225,15 +207,14 @@ class ISSLocationSkill(OVOSSkill):
         IntentBuilder("NumberISSIntent").require("how_many").require(
             "onboard").require("iss"))
     def handle_number(self, message):
-        self.update_picture()
+        self.update_picture()  # values available in self.gui
         people = [
-            p["name"] for p in self.settings["astronauts"]
+            p["name"] for p in self.gui["astronauts"]
             if p["craft"] == "ISS"
         ]
         num = len(people)
         people = ", ".join(people)
-        iss = join(dirname(__file__), "ui", "images", "iss.png")
-        self.gui.show_image(iss,
+        self.gui.show_image(self.settings["iss_bg"],
                             override_idle=True,
                             fill='PreserveAspectFit',
                             caption=people)

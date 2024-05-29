@@ -6,12 +6,12 @@ import os
 
 # Define package information
 SKILL_CLAZZ = "ISSLocationSkill"  # Make sure it matches __init__.py class name
-VERSION = "0.1.0a1"
+VERSION = "0.1.0a2"
 URL = "https://github.com/OpenVoiceOS/ovos-skill-iss-location"
 AUTHOR = "OpenVoiceOS"
 EMAIL = "jarbasai@mailfence.com"
 LICENSE = "Apache2.0"
-DESCRIPTION = SKILL_CLAZZ # TODO
+DESCRIPTION = "info about where is the space station and astronauts on board"
 
 PYPI_NAME = URL.split("/")[-1]  # pip install PYPI_NAME
 
