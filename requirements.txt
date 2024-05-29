@@ -1,6 +1,5 @@
 matplotlib
-https://github.com/matplotlib/basemap/archive/master.zip
+basemap
 pillow
 requests
 requests-cache
-mtranslate

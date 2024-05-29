@@ -1,9 +1,10 @@
 import tempfile
-from datetime import timedelta, datetime
+from datetime import datetime
 from os.path import join, dirname
 from time import sleep
 
 import matplotlib.pyplot as plt
+import requests
 from lingua_franca.format import nice_duration
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 from mpl_toolkits.basemap import Basemap
@@ -11,7 +12,6 @@ from ovos_workshop.decorators import intent_handler
 from ovos_workshop.decorators import resting_screen_handler
 from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
-from requests_cache import CachedSession
 
 
 class ISSLocationSkill(OVOSSkill):
@@ -32,15 +32,12 @@ class ISSLocationSkill(OVOSSkill):
             self.settings["iss_icon"] = "iss3.png"
         if "dpi" not in self.settings:
             self.settings["dpi"] = 500
-        _expire_after = timedelta(minutes=5)
-        self._session = CachedSession(backend='memory',
-                                      expire_after=_expire_after)
 
     def update_picture(self):
         try:
-            data = self._session.get(
+            data = requests.get(
                 "http://api.open-notify.org/iss-now.json").json()
-            astronauts = self._session.get(
+            astronauts = requests.get(
                 "http://api.open-notify.org/astros.json").json()
 
             self.settings["astronauts"] = astronauts["people"]
@@ -59,7 +56,7 @@ class ISSLocationSkill(OVOSSkill):
                 land_names = "http://api.geonames.org/countryCodeJSON"
 
                 # reverse geo
-                data = self._session.get(ocean_names, params=params).json()
+                data = requests.get(ocean_names, params=params).json()
                 try:
                     toponym = "The " + data['ocean']['name']
                 except:
@@ -72,13 +69,12 @@ class ISSLocationSkill(OVOSSkill):
                             "formatted": True,
                             "style": "full"
                         }
-                        data = self._session.get(land_names,
-                                                 params=params).json()
+                        data = requests.get(land_names,
+                                            params=params).json()
                         toponym = data['countryName']
                     except:
                         toponym = "unknown"
-                if not self.lang.lower().startswith("en") and \
-                        toponym != "unknown":
+                if not self.lang.lower().startswith("en") and toponym != "unknown":
                     toponym = self.translator.translate(toponym, self.lang)
                 self.settings['toponym'] = toponym
                 image = self.generate_map(lat, lon)
@@ -182,7 +178,7 @@ class ISSLocationSkill(OVOSSkill):
         lon = self.location["coordinate"]["longitude"]
         if not self.settings.get("passing_by"):
             params = {"lat": lat, "lon": lon}
-            passing = self._session.get(
+            passing = requests.get(
                 "http://api.open-notify.org/iss-pass.json",
                 params=params).json()
             self.settings["passing_by"] = passing["response"]
@@ -244,3 +240,10 @@ class ISSLocationSkill(OVOSSkill):
         self.speak_dialog("number", {"number": num}, wait=True)
         sleep(1)
         self.gui.clear()
+
+
+if __name__ == "__main__":
+    from ovos_utils.fakebus import FakeBus
+
+    s = ISSLocationSkill(skill_id="fake.test", bus=FakeBus())
+    s.update_picture()

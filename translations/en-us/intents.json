@@ -1,0 +1,27 @@
+{
+    "when_iss.intent": [
+        "when is the I S S passing by",
+        "when is the space station passing by",
+        "when is the international space station passing by",
+        "international space station passing over"
+    ],
+    "where_iss.intent": [
+        "where is the I S S",
+        "where is the space station",
+        "where is the international space station",
+        "international space station location",
+        "location of the space station",
+        "location of I S S",
+        "I S S location"
+    ],
+    "about.intent": [
+        "about the ISS",
+        "about the space station",
+        "talk about the international space station",
+        "what is ISS",
+        "tell me about international space station",
+        "talk about international space station",
+        "tell me about international space station",
+        "what is the international space station"
+    ]
+}
