@@ -31,7 +31,7 @@ for lang in os.listdir(locale):
 
             if fid.endswith(".intent"):
                 intents[fid] = strings
-            elif fid.endswith(".locale"):
+            elif fid.endswith(".dialog"):
                 dialogs[fid] = strings
             elif fid.endswith(".voc"):
                 vocs[fid] = strings
