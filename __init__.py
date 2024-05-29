@@ -81,14 +81,12 @@ class ISSLocationSkill(OVOSSkill):
             self.gui['lot'] = lon
             self.gui["astronauts"] = astronauts["people"]
             self.set_context("iss")
-            return image
         except Exception as e:
             self.log.exception(e)
 
     @resting_screen_handler("ISS")
     def idle(self, message):
         self.update_picture()  # values available in self.gui
-        self.gui.clear()
         self.gui.show_image(self.gui['imgLink'], fill='PreserveAspectFit')
 
     def generate_map(self, lat, lon):
