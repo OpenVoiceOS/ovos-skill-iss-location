@@ -4,7 +4,7 @@
   ],
   "location.unknown.dialog": [
     "A estação espacial está em {latitude} latitude {longitude} longitude, mas não sei onde isso fica",
-    null
+    "A ISS está agora acima de {latitude} latitude {longitude} longitude, mas não há nenhuma característica geográfica associada"
   ],
   "number.dialog": [
     "{number} pessoas estão a bordo da estação espacial internacional",
@@ -18,15 +18,15 @@
   ],
   "location.when.dialog": [
     "A I S S vai estar em {toponym} dentro de {duration}",
-    null,
-    null
+    "A estação espacial estará em {toponym} em {duration}",
+    "A estação espacial internacional estará em {toponym} em {duration}"
   ],
   "who.dialog": [
     "{people} estão a bordo da estação espacial internacional",
     "{people} estão na estação espacial",
     "{people} estão a bordo da I S S",
     "{people} estão em órbita a bordo da estação espacial",
-    null,
+    "as seguintes pessoas estão a bordo da estação espacial internacional, {people}",
     "[UNUSED]"
   ],
   "location.current.dialog": [
