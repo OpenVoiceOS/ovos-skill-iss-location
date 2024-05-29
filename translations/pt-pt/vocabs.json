@@ -1,0 +1,25 @@
+{
+  "how_many.voc": [
+    "quantas",
+    null,
+    null
+  ],
+  "onboard.voc": [
+    null,
+    "(da|na)",
+    null,
+    "a ficar"
+  ],
+  "who.voc": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "iss.voc": [
+    null,
+    "I S S",
+    null,
+    null
+  ]
+}
