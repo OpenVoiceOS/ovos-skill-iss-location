@@ -1,0 +1,3 @@
+[ovos.plugin.skill]
+ovos-skill-iss-location.openvoiceos=ovos_skill_iss_location:ISSLocationSkill
+
