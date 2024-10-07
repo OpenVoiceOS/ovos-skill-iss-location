@@ -1,0 +1,43 @@
+{
+  "about.dialog": [
+    "L'Estació Espacial Internacional és una estació espacial modular en òrbita terrestre baixa. El programa EEI és un projecte de col·laboració multinacional entre cinc agències espacials participants: NASA (Estats Units), Roscosmos (Rússia), JAXA (Japó), ESA (Europa) i CSA (Canadà). La propietat i l'ús de l'estació espacial s'estableix en tractats i acords intergovernamentals."
+  ],
+  "location.unknown.dialog": [
+    "L'EEI es troba ara per sobre de latitud {latitude} i longitud {longitude}, però no hi ha cap element geogràfic associat",
+    "L'estació espacial es troba a latitud {latitude} i longitud {longitude} però no sé on és això"
+  ],
+  "number.dialog": [
+    "hi ha {number} persones en òrbita a bord de l'estació espacial",
+    "hi ha {number} persones a bord de l'E E I",
+    "hi ha {number} persones a bord de l'estació espacial internacional",
+    "hi ha {number} persones a bord de l'estació espacial",
+    "{number} persones estan en òrbita a bord de l'estació espacial",
+    "{number} persones a bord de l'E E I",
+    "{number} persones són a bord de l'estació espacial internacional",
+    "{number} persones són a bord de l'estació espacial"
+  ],
+  "visible_for.dialog": [
+    "Serà visible durant {duration}",
+    "La podreu veure durant {duration}"
+  ],
+  "location.when.dialog": [
+    "L'E E I serà sobre {toponnym} d'aquí a {duration}",
+    "L'estació espacial internacional serà a {toponym} d'aqui a {duration}",
+    "L'estació espacial serà a {toponym} d'aquí a {duration}"
+  ],
+  "who.dialog": [
+    "les persones següents són a bord de l'estació espacial internacional, {people}",
+    "les persones següents estan a bord de l'estació espacial internacional, {people}",
+    "{people} són en òrbita a bord de l'estació espacial",
+    "{people} són a bord de l'E E I",
+    "{people} són a bord de l'estació espacial internacional",
+    "{people} són a bord de l'estació espacial"
+  ],
+  "location.current.dialog": [
+    "És a latitud {latitude} i longitud {longitude, sobre de {toponym}",
+    "Sobre {toponym} a latitud {latitude} i longitud {longitude}",
+    "L'E E I és per sobre de latitud {latitude} i longitud {longitude}, que correspon a {toponym}",
+    "L'estació espacial internacional és ara per sobre de {toponym} a latitud {latitude} i longitud {longitude}",
+    "L'estació espacial es troba a latitud {latitud} i longitud {longitud} sobre {toponym}"
+  ]
+}
