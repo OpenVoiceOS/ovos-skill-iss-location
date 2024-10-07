@@ -1,0 +1,25 @@
+{
+  "how_many.voc": [
+    "quantes",
+    "nombre",
+    "total"
+  ],
+  "onboard.voc": [
+    "a bord",
+    "a la\na sa",
+    "a bord",
+    "hi ha"
+  ],
+  "who.voc": [
+    "qui",
+    "persona",
+    "persones",
+    "gent"
+  ],
+  "iss.voc": [
+    "ISS\nEEI",
+    "I S S\nE E I",
+    "estació espacial",
+    "estació espacial internacional"
+  ]
+}
