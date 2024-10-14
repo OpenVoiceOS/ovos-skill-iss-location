@@ -17,27 +17,27 @@
     "ci sono {number} persone in orbita a bordo della Stazione Spaziale Internazionale"
   ],
   "visible_for.dialog": [
-    null,
-    null
+    "Sarà visibile per {duration}",
+    "Potrai vederla per {duration}"
   ],
   "location.when.dialog": [
     "La S S I passerà sopra {toponym} tra {duration}",
     "La stazione spaziale internazionale passerà sopra {toponym} tra {duration}",
-    null
+    "La stazione spaziale sarà sopra {toponym} tra {duration}"
   ],
   "who.dialog": [
-    null,
-    null,
+    "le seguenti persone sono a bordo della stazione spaziale internazionale: {people}",
+    "le seguenti persone sono a bordo della stazione spaziale internazionale: {people}",
     "le seguenti persone sono a bordo della stazione spaziale internazionale: {people}",
     "le seguenti persone sono a bordo della stazione spaziale internazionale: {people}",
     "le seguenti persone sono a bordo della stazione spaziale internazionale: {people}",
     "le seguenti persone sono a bordo della stazione spaziale internazionale: {people}"
   ],
   "location.current.dialog": [
-    null,
-    null,
-    null,
-    null,
-    null
+    "È alla latitudine {latitude} e longitudine {longitude}, sopra {toponym}",
+    "Sopra {toponym}, alla latitudine {latitude} e longitudine {longitude}",
+    "La S S I è sopra la latitudine {latitude} e la longitudine {longitude}, che corrisponde a {toponym}",
+    "La stazione spaziale internazionale è ora sopra {toponym}, alla latitudine {latitude} e longitudine {longitude}",
+    "La stazione spaziale è alla latitudine {latitude} e longitudine {longitude}, sopra {toponym}"
   ]
 }
