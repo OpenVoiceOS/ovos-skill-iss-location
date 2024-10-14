@@ -1,0 +1,43 @@
+{
+  "about.dialog": [
+    "La Stazione Spaziale Internazionale è una stazione spaziale modulare situata nell'orbita terrestre bassa. Il programma ISS è un progetto collaborativo multinazionale tra cinque agenzie spaziali: NASA (Stati Uniti), Roscosmos (Russia), JAXA (Giappone), ESA (Europa) e CSA (Canada). La proprietà e l'uso della stazione spaziale sono stabiliti da trattati e accordi intergovernativi."
+  ],
+  "location.unknown.dialog": [
+    "La stazione spaziale si trova ora a latitudine {latitude} e longitudine {longitude} e non so a cosa corrispondano queste coordintate",
+    "La stazione spaziale si trova ora a latitudine {latitude} e longitudine {longitude} ma non so a cosa corrispondano queste coordinate"
+  ],
+  "number.dialog": [
+    "ci sono {number} persone in orbita a bordo della Stazione Spaziale Internazionale",
+    "ci sono {number} persone in orbita a bordo della Stazione Spaziale Internazionale",
+    "ci sono {number} persone in orbita a bordo della Stazione Spaziale Internazionale",
+    "ci sono {number} persone in orbita a bordo della Stazione Spaziale Internazionale",
+    "ci sono {number} persone in orbita a bordo della Stazione Spaziale Internazionale",
+    "ci sono {number} persone in orbita a bordo della Stazione Spaziale Internazionale",
+    "ci sono {number} persone in orbita a bordo della Stazione Spaziale Internazionale",
+    "ci sono {number} persone in orbita a bordo della Stazione Spaziale Internazionale"
+  ],
+  "visible_for.dialog": [
+    null,
+    null
+  ],
+  "location.when.dialog": [
+    "La S S I passerà sopra {toponym} tra {duration}",
+    "La stazione spaziale internazionale passerà sopra {toponym} tra {duration}",
+    null
+  ],
+  "who.dialog": [
+    null,
+    null,
+    "le seguenti persone sono a bordo della stazione spaziale internazionale: {people}",
+    "le seguenti persone sono a bordo della stazione spaziale internazionale: {people}",
+    "le seguenti persone sono a bordo della stazione spaziale internazionale: {people}",
+    "le seguenti persone sono a bordo della stazione spaziale internazionale: {people}"
+  ],
+  "location.current.dialog": [
+    null,
+    null,
+    null,
+    null,
+    null
+  ]
+}
