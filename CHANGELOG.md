@@ -1,22 +1,17 @@
 # Changelog
 
-## [Unreleased](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/HEAD)
+## [0.2.1a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.1a1) (2024-10-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/4d026801518d96c9ffbedbb9057fb53d48574cb5...HEAD)
-
-**Fixed bugs:**
-
-- ERROR - \[Errno 2\] No such file or directory [\#3](https://github.com/OpenVoiceOS/ovos-skill-iss-location/issues/3)
-
-**Closed issues:**
-
-- ERROR - \[Errno 2\] No such file or directory: 'iss3.png' [\#5](https://github.com/OpenVoiceOS/ovos-skill-iss-location/issues/5)
-- No such file or directory: '/home/goldyfruit/.venvs/ovos/lib/python3.12/site-packages/ovos\_skill\_iss\_location/iss3.png [\#4](https://github.com/OpenVoiceOS/ovos-skill-iss-location/issues/4)
-- Failed to run in ovos [\#1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/issues/1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.1.0...0.2.1a1)
 
 **Merged pull requests:**
 
-- pt-pt/translate [\#2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/2) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- fix:update\_requirements [\#14](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/14) ([JarbasAl](https://github.com/JarbasAl))
+- accepted addition translation [\#13](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/13) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- accepted index translation [\#12](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/12) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- Add Catalan translation [\#10](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/10) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- Add Catalan translation [\#9](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/9) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- Add Catalan translation [\#8](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/8) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 

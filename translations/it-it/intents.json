@@ -1,0 +1,19 @@
+{
+  "when_iss.intent": [
+    "(quando|quand'è che) la stazione spaziale (internazionale|) (passa|passerà) sopra (di|) (me|noi|qui|)",
+    "(quando|quand'è che) (la|l') (SSI|ISS|S S I|I S S) (passa|passerà) sopra (di|) (me|noi|qui|)",
+    "(quando|quand'è che) la stazione spaziale (internazionale|) si (trova|troverà) sopra (di|) (me|noi|qui|)",
+    "(quando|quand'è che) (la|l') (SSI|ISS|S S I|I S S) si (trova|troverà) sopra (di|) (me|noi|qui|)"
+  ],
+  "where_iss.intent": [
+    "(dove è|dov'è|dove si trova) la stazione spaziale (internazionale|)",
+    "(dimmi|dicci|dì|) (quale è|qual è|) la posizione della stazione spaziale (internazionale|)",
+    "(la|) posizione della stazione spaziale (internazionale|)",
+    "(dove è|dov'è|dove si trova) (la|l') (SSI|ISS|S S I|I S S) ",
+    "(dimmi|dicci|dì|) (quale è|qual è|) la posizione (della|dell') (SSI|ISS|S S I|I S S)",
+    "(la|) posizione (della|dell') (SSI|ISS|S S I|I S S)"
+  ],
+  "about.intent": [
+    "(parlami|dammi|voglio|cosa è|cos'è) (informazioni|info|) (della|dell'|sulla|sull'|la|l'|di|su) (stazione spaziale|stazione spaziale internazionale|SSI|ISS|S S I|I S S)"
+  ]
+}
