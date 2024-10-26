@@ -1,0 +1,19 @@
+{
+  "when_iss.intent": [
+    "wann fliegt die (internationale|) Raumstation (an uns|mir) (vorbei|über uns hinweg)",
+    "wann zieht die (ISS|I S S) (an|über|an) (uns|mir|) vorbei",
+    "wann wird die (internationale|) Raumstation (über|über) (uns|mir|) sein",
+    "wann wird die (ISS|I S S) (über|über) (uns|mir|) sein"
+  ],
+  "where_iss.intent": [
+    "wo ist die (internationale|) Raumstation",
+    "(Zeige mir|nenne mir|sag mir) den  Standort der (internationale|) Raumstation",
+    "Standort der (internationalen|) Raumstation",
+    "wo ist die (ISS|I S S)",
+    "(Zeige mir|nenne mir|sag mir) den (ISS|I S S) Standort",
+    "Standort der (ISS|I S S)"
+  ],
+  "about.intent": [
+    "erzähle mir von der (internationalen|) Raumstation\nwas ist die (internationale|) Raumstation"
+  ]
+}
