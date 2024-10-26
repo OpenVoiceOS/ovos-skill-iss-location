@@ -1,0 +1,43 @@
+{
+  "about.dialog": [
+    "Die Internationale Raumstation ist eine modulare Raumstation in niedriger Erdumlaufbahn. Das ISS-Programm ist ein multinationales Gemeinschaftsprojekt von fünf beteiligten Raumfahrtagenturen: NASA (USA), Roscosmos (Russland), JAXA (Japan), ESA (Europa) und CSA (Kanada). Eigentum und Nutzung der Raumstation werden durch zwischenstaatliche Verträge und Abkommen geregelt."
+  ],
+  "location.unknown.dialog": [
+    "Die ISS befindet sich jetzt über Breitengrad {latitude} und Längengrad {longitude}, aber ich weiß nicht wo das ist",
+    "Die Raumstation befindet sich auf Breitengrad {latitude} und Längengrad, {longitude}, aber ich weiß nicht, wo das ist"
+  ],
+  "number.dialog": [
+    "Es befinden sich {number} Personen im Orbit an Bord der Raumstation",
+    "Es befinden sich {number} Personen an Bord der I S S",
+    "Es befinden sich {number} Personen an Bord der Internationalen Raumstation",
+    "Es befinden sich {number} Personen an Bord der Raumstation",
+    "{number} Personen befinden sich an Bord der Raumstation im Orbit",
+    "{number} Personen sind an Bord der I S S",
+    "{number} Personen sind an Bord der Internationalen Raumstation",
+    "{number} Personen sind an Bord der Raumstation"
+  ],
+  "visible_for.dialog": [
+    "Sie wird für {duration} sichtbar sein",
+    "Du kannst sie {duration} lang sehen."
+  ],
+  "location.when.dialog": [
+    "Die I S S wird in {duration} über {toponym} sein.",
+    "Die internationale Raumstation wird in {duration} am Standort {toponym} sein.",
+    "Die Raumstation wird in {duration} am Standort {toponym} sein."
+  ],
+  "who.dialog": [
+    "Die folgenden Personen befinden sich an Bord der Internationalen Raumstation, {people}",
+    "Die folgenden Personen befinden sich an Bord der Internationalen Raumstation, {people}",
+    "{people} befinden sich an Bord der Raumstation im Orbit",
+    "{people} sind an Bord der I S S",
+    "{people} sind an Bord der internationalen Raumstation",
+    "{people} sind an Bord der Raumstation"
+  ],
+  "location.current.dialog": [
+    "Es liegt bei Breitengrad {latitude} und Längengrad {longitude}, über {toponym}",
+    "Über {Toponym} bei Breitengrad {latitude} und Längengrad {longitude}",
+    "Das I S S fliegt über {latitude} Breitengrad {longitude} Längengrad, was {Toponym} entspricht",
+    "Die Internationale Raumstation befindet sich jetzt über {toponym} auf {latitude} Breitengrad {longitude} Längengrad",
+    "Die Raumstation befindet sich auf Breitengrad {latitude} und Längengrad {longitude} über {toponym}"
+  ]
+}
