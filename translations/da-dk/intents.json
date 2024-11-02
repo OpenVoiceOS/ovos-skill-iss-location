@@ -1,0 +1,19 @@
+{
+  "when_iss.intent": [
+    "hvornår passerer (den internationale|) (rumstation|rumstationen) (forbi|over|ovenfor) (os|mig|her|)",
+    "hvornår passerer (ISS|I S S) (forbi|over|ovenfor) (os|mig|her|)",
+    "hvornår vil den (internationale|) rumstation være (over|over) (os|mig|her|)",
+    "hvornår vil (ISS|I S S) være (over|over) (os|mig|her|)"
+  ],
+  "where_iss.intent": [
+    "hvor er (den internationale|) (rumstation|rumstationen)",
+    "(hvad er|fortæl mig) (den internationale|) (rumstations|rumstationens) placering",
+    "placeringen af ​​(den internationale|) (rumstation|rumstationen)",
+    null,
+    "(hvad er|fortæl mig) placeringen af (ISS|I S S).",
+    null
+  ],
+  "about.intent": [
+    "(tal om|fortæl mig om|hvad er|info om) (den internationale|) (rumstation|rumstationen)"
+  ]
+}
