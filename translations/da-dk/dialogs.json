@@ -1,0 +1,43 @@
+{
+  "about.dialog": [
+    "Den Internationale Rumstation er en modulær rumstation i lav kredsløb om Jorden. ISS-programmet er et multinationalt samarbejdsprojekt mellem fem deltagende rumorganisationer: NASA (USA), Roscosmos (Rusland), JAXA (Japan), ESA (Europa) og CSA (Canada). Ejerskabet og brugen af ​​rummet station er etableret ved mellemstatslige traktater og aftaler."
+  ],
+  "location.unknown.dialog": [
+    "ISS er nu over {latitude} breddegrad {longitude} længdegrad, men der er ingen tilknyttet geografisk funktion",
+    "Rumstationen er på {latitude} breddegrad {longitude} længdegrad, men jeg ved ikke, hvor det er"
+  ],
+  "number.dialog": [
+    "der er {number} personer i kredsløb om bord på rumstationen",
+    "der er {antal} personer om bord på I S S",
+    "der er {number} personer om bord på den internationale rumstation",
+    "der er {antal} personer om bord på rumstationen",
+    "{number} personer er i kredsløb om bord på rumstationen",
+    "{number} personer er om bord på I S S",
+    "{number} personer er om bord på den internationale rumstation",
+    "{number} personer er om bord på rumstationen"
+  ],
+  "visible_for.dialog": [
+    "Den vil være synlig i {duration}",
+    "Du vil kunne se den i {duration}"
+  ],
+  "location.when.dialog": [
+    "I S S vil være over {toponym} om {duration}",
+    "Den internationale rumstation vil være på {toponym} om {duration}",
+    "Rumstationen vil være på {toponym} om {duration}"
+  ],
+  "who.dialog": [
+    "følgende personer er om bord på den internationale rumstation, {people}",
+    "følgende personer er om bord på den internationale rumstation, {people}",
+    "{people} er i kredsløb om bord på rumstationen",
+    "{people} er om bord på I S S",
+    "{people} er om bord på den internationale rumstation",
+    "{people} er om bord på rumstationen"
+  ],
+  "location.current.dialog": [
+    "Det er på {latitude} breddegrad {longitude} længdegrad, over {toponym}",
+    "Over {toponym} ved {latitude} breddegrad og {longitude} længdegrad",
+    "I S S er over {latitude} breddegrad {longitude} længdegrad, hvilket svarer til {toponym}",
+    "Den internationale rumstation er nu over {toponym} på {latitude} breddegrad {longitude} længdegrad",
+    "Rumstationen er på {latitude} breddegrad {longitude} længdegrad over {toponym}"
+  ]
+}
