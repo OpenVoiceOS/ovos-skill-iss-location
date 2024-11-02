@@ -9,9 +9,9 @@
     "hvor er (den internationale|) (rumstation|rumstationen)",
     "(hvad er|fortæl mig) (den internationale|) (rumstations|rumstationens) placering",
     "placeringen af ​​(den internationale|) (rumstation|rumstationen)",
-    null,
+    "hvor er (ISS|I S S)",
     "(hvad er|fortæl mig) placeringen af (ISS|I S S).",
-    null
+    "placeringen af ​​(ISS|I S S)"
   ],
   "about.intent": [
     "(tal om|fortæl mig om|hvad er|info om) (den internationale|) (rumstation|rumstationen)"
