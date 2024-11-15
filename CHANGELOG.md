@@ -1,8 +1,8 @@
 # Changelog
 
-## [0.2.2a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.2a1) (2024-11-15)
+## [0.2.2a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.2a2) (2024-11-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.2a1...0.2.2a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.2a1...0.2.2a2)
 
 **Merged pull requests:**
 
