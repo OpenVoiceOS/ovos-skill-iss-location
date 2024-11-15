@@ -1,17 +1,26 @@
 # Changelog
 
-## [0.2.1a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.1a1) (2024-10-15)
+## [0.2.2a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.2a1) (2024-11-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.1.0...0.2.1a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.2a1...0.2.2a1)
 
 **Merged pull requests:**
 
-- fix:update\_requirements [\#14](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/14) ([JarbasAl](https://github.com/JarbasAl))
-- accepted addition translation [\#13](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/13) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- accepted index translation [\#12](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/12) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Add Catalan translation [\#10](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/10) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Add Catalan translation [\#9](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/9) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Add Catalan translation [\#8](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/8) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- fix: optional gui and missing skilljson [\#19](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/19) ([JarbasAl](https://github.com/JarbasAl))
+- da-dk/translate [\#17](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/17) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- accepted addition translation [\#11](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/11) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [0.2.2a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.2a1) (2024-10-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.1...0.2.2a1)
+
+**Merged pull requests:**
+
+- de-de/translate [\#16](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/16) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [V0.2.1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.1) (2024-10-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.1...V0.2.1)
 
 
 
