@@ -3,12 +3,9 @@ from datetime import datetime, timedelta
 from os.path import join
 from time import sleep
 
-import matplotlib.pyplot as plt
 import pytz
 import requests
-from lingua_franca.format import nice_duration
-from matplotlib.offsetbox import OffsetImage, AnnotationBbox
-from mpl_toolkits.basemap import Basemap
+from ovos_date_parser import nice_duration
 from ovos_utils.time import to_local, now_local
 from ovos_workshop.decorators import intent_handler
 from ovos_workshop.decorators import resting_screen_handler
@@ -16,11 +13,21 @@ from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
 from skyfield.api import Topos, load
 
+try:
+    import matplotlib.pyplot as plt
+    from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+    from mpl_toolkits.basemap import Basemap
+    GUI = True
+except ImportError:
+    GUI = False
+
 
 class ISSLocationSkill(OVOSSkill):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        if "enable_gui" not in self.settings:
+            self.settings["enable_gui"] = False
         if "geonames_user" not in self.settings:
             self.settings["geonames_user"] = "jarbas"
         if "map_style" not in self.settings:
@@ -38,46 +45,51 @@ class ISSLocationSkill(OVOSSkill):
         if "dpi" not in self.settings:
             self.settings["dpi"] = 500
 
-    def update_picture(self):
+    @property
+    def use_gui(self) -> bool:
+        return GUI and self.settings["enable_gui"]
+
+    def get_iss_data(self):
+        data = requests.get("http://api.open-notify.org/iss-now.json").json()
+        astronauts = requests.get("http://api.open-notify.org/astros.json").json()
+
+        lat = data['iss_position']['latitude']
+        lon = data['iss_position']['longitude']
+
+        params = {
+            "username": self.settings["geonames_user"],
+            "lat": lat,
+            "lng": lon
+        }
+        ocean_names = "http://api.geonames.org/oceanJSON"
+        land_names = "http://api.geonames.org/countryCodeJSON"
+
+        # reverse geo
+        data = requests.get(ocean_names, params=params).json()
         try:
-            data = requests.get("http://api.open-notify.org/iss-now.json").json()
-            astronauts = requests.get("http://api.open-notify.org/astros.json").json()
+            toponym = "The " + data['ocean']['name']
+        except:
 
-            lat = data['iss_position']['latitude']
-            lon = data['iss_position']['longitude']
-
-            params = {
-                "username": self.settings["geonames_user"],
-                "lat": lat,
-                "lng": lon
-            }
-            ocean_names = "http://api.geonames.org/oceanJSON"
-            land_names = "http://api.geonames.org/countryCodeJSON"
-
-            # reverse geo
-            data = requests.get(ocean_names, params=params).json()
             try:
-                toponym = "The " + data['ocean']['name']
+                params = {
+                    "username": self.settings["geonames_user"],
+                    "lat": lat,
+                    "lng": lon,
+                    "formatted": True,
+                    "style": "full"
+                }
+                data = requests.get(land_names,
+                                    params=params).json()
+                toponym = data['countryName']
             except:
+                toponym = "unknown"
+        if not self.lang.lower().startswith("en") and toponym != "unknown":
+            toponym = self.translator.translate(toponym, self.lang)
+        return toponym, lat, lon, astronauts
 
-                try:
-                    params = {
-                        "username": self.settings["geonames_user"],
-                        "lat": lat,
-                        "lng": lon,
-                        "formatted": True,
-                        "style": "full"
-                    }
-                    data = requests.get(land_names,
-                                        params=params).json()
-                    toponym = data['countryName']
-                except:
-                    toponym = "unknown"
-            if not self.lang.lower().startswith("en") and toponym != "unknown":
-                toponym = self.translator.translate(toponym, self.lang)
-
+    def update_picture(self, toponym, lat, lon, astronauts):
+        try:
             image = self.generate_map(lat, lon)
-
             self.gui['imgLink'] = image
             self.gui['caption'] = f"{toponym} Lat: {lat}  Lon: {lon}"
             self.gui['lat'] = lat
@@ -90,7 +102,8 @@ class ISSLocationSkill(OVOSSkill):
 
     @resting_screen_handler("ISS")
     def idle(self, message):
-        self.update_picture()  # values available in self.gui
+        toponym, lat, lon, astronauts = self.get_iss_data()
+        self.update_picture(toponym, lat, lon, astronauts)  # values available in self.gui
         self.gui.show_image(self.gui['imgLink'], fill='PreserveAspectFit')
 
     def generate_map(self, lat, lon):
@@ -142,20 +155,23 @@ class ISSLocationSkill(OVOSSkill):
 
     @intent_handler('where_iss.intent')
     def handle_iss(self, message):
-        self.update_picture()  # values available in self.gui
-        self.gui.show_image(self.gui['imgLink'],
-                            caption=self.gui['caption'],
-                            fill='PreserveAspectFit')
-        if self.gui['toponym'] == "unknown":
+        toponym, lat, lon, astronauts = self.get_iss_data()
+        if self.use_gui:
+            self.update_picture(toponym, lat, lon, astronauts)
+            self.gui.show_image(self.gui['imgLink'],
+                                caption=self.gui['caption'],
+                                fill='PreserveAspectFit')
+
+        if toponym == "unknown":
             self.speak_dialog("location.unknown", {
-                "latitude": self.gui['lat'],
-                "longitude": self.gui['lon']
+                "latitude": lat,
+                "longitude": lon
             }, wait=True)
         else:
             self.speak_dialog("location.current", {
-                "latitude": self.gui['lat'],
-                "longitude": self.gui['lon'],
-                "toponym": self.gui['toponym']
+                "latitude": lat,
+                "longitude":lon,
+                "toponym": toponym
             }, wait=True)
         sleep(1)
         self.gui.release()
@@ -172,10 +188,10 @@ class ISSLocationSkill(OVOSSkill):
 
         duration = nice_duration(dur, lang=self.lang)
         visible_dur = nice_duration(delta, lang=self.lang)
-        caption = self.location_pretty + " " + dt.strftime("%m/%d/%Y, %H:%M:%S")
-        image = self.generate_map(lat, lon)
-
-        self.gui.show_image(image, caption=caption, fill='PreserveAspectFit')
+        if self.use_gui:
+            caption = self.location_pretty + " " + dt.strftime("%m/%d/%Y, %H:%M:%S")
+            image = self.generate_map(lat, lon)
+            self.gui.show_image(image, caption=caption, fill='PreserveAspectFit')
 
         self.speak_dialog("location.when", {
             "duration": duration,
@@ -186,31 +202,32 @@ class ISSLocationSkill(OVOSSkill):
         }, wait=True)
         self.gui.release()
 
-    @intent_handler(
-        IntentBuilder("WhoISSIntent").require("who").require(
-            "onboard").require("iss"))
+    @intent_handler(IntentBuilder("WhoISSIntent").require("who").
+                    require("onboard").require("iss"))
     def handle_who(self, message):
-        self.update_picture()  # values available in self.gui
+        toponym, lat, lon, astronauts = self.get_iss_data()
         people = [
-            p["name"] for p in self.gui["astronauts"]
+            p["name"] for p in astronauts
             if p["craft"] == "ISS"
         ]
         people = ", ".join(people)
-        self.gui.show_image(self.settings["iss_bg"],
-                            override_idle=True,
-                            fill='PreserveAspectFit',
-                            caption=people)
+        if self.use_gui:
+            self.update_picture(toponym, lat, lon, astronauts)
+            self.gui.show_image(self.settings["iss_bg"],
+                                override_idle=True,
+                                fill='PreserveAspectFit',
+                                caption=people)
         self.speak_dialog("who", {"people": people}, wait=True)
         sleep(1)
         self.gui.release()
 
-    @intent_handler(
-        IntentBuilder("NumberISSIntent").require("how_many").require(
-            "onboard").require("iss"))
+    @intent_handler(IntentBuilder("NumberISSIntent").require("how_many")
+                    .require("onboard").require("iss"))
     def handle_number(self, message):
-        self.update_picture()  # values available in self.gui
+
+        toponym, lat, lon, astronauts = self.get_iss_data()
         people = [
-            p["name"] for p in self.gui["astronauts"]
+            p["name"] for p in astronauts
             if p["craft"] == "ISS"
         ]
         num = len(people)
@@ -336,6 +353,7 @@ if __name__ == "__main__":
     from ovos_utils.fakebus import FakeBus
     from ovos_bus_client.message import Message
     from ovos_config.locale import setup_locale
+
     setup_locale()
 
 
