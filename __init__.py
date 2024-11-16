@@ -8,7 +8,6 @@ import requests
 from ovos_date_parser import nice_duration
 from ovos_utils.time import to_local, now_local
 from ovos_workshop.decorators import intent_handler
-from ovos_workshop.decorators import resting_screen_handler
 from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
 from skyfield.api import Topos, load
@@ -44,6 +43,13 @@ class ISSLocationSkill(OVOSSkill):
             self.settings["iss_bg"] = f"{self.root_dir}/ui/iss.png"
         if "dpi" not in self.settings:
             self.settings["dpi"] = 500
+
+    def initialize(self):
+        if self.use_gui:
+            # equivalent to using the resting_screen_handler decorator
+            # but we only do it if GUI is enabled
+            self.idle.resting_handler = "ISS Location"
+            self.register_resting_screen()
 
     @property
     def use_gui(self) -> bool:
@@ -100,7 +106,6 @@ class ISSLocationSkill(OVOSSkill):
         except Exception as e:
             self.log.exception(e)
 
-    @resting_screen_handler("ISS")
     def idle(self, message):
         toponym, lat, lon, astronauts = self.get_iss_data()
         self.update_picture(toponym, lat, lon, astronauts)  # values available in self.gui
