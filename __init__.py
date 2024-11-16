@@ -37,10 +37,6 @@ class ISSLocationSkill(OVOSSkill):
             self.settings["center_location"] = False
         if "iss_size" not in self.settings:
             self.settings["iss_size"] = 0.5
-        if "iss_icon" not in self.settings:
-            self.settings["iss_icon"] = f"{self.root_dir}/ui/iss3.png"
-        if "iss_bg" not in self.settings:
-            self.settings["iss_bg"] = f"{self.root_dir}/ui/iss.png"
         if "dpi" not in self.settings:
             self.settings["dpi"] = 500
 
@@ -133,7 +129,7 @@ class ISSLocationSkill(OVOSSkill):
         m.bluemarble()
         x, y = m(lon, lat)
 
-        iss = plt.imread(self.settings["iss_icon"])
+        iss = plt.imread(self.settings.get("iss_icon", f"{self.root_dir}/gui/all/iss3.png"))
         im = OffsetImage(iss, zoom=self.settings["iss_size"])
         ab = AnnotationBbox(im, (x, y), xycoords='data', frameon=False)
 
@@ -150,7 +146,7 @@ class ISSLocationSkill(OVOSSkill):
     @intent_handler("about.intent")
     def handle_about_iss_intent(self, message):
         utterance = self.dialog_renderer.render("about", {})
-        self.gui.show_image(self.settings["iss_bg"],
+        self.gui.show_image(self.settings.get("iss_bg", "iss.png"),
                             override_idle=True,
                             fill='PreserveAspectFit',
                             caption=utterance)
