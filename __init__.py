@@ -124,7 +124,7 @@ class ISSLocationSkill(OVOSSkill):
         m.bluemarble()
         x, y = m(lon, lat)
 
-        iss = plt.imread(self.settings.get("iss_icon", f"{self.root_dir}/ui/iss3.png"))
+        iss = plt.imread(self.settings.get("iss_icon", f"{self.root_dir}/gui/all/iss3.png"))
         im = OffsetImage(iss, zoom=self.settings["iss_size"])
         ab = AnnotationBbox(im, (x, y), xycoords='data', frameon=False)
 
