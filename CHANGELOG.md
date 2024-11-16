@@ -1,16 +1,16 @@
 # Changelog
 
-## [0.2.3a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.3a1) (2024-11-16)
+## [0.2.4a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.4a1) (2024-11-16)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.2...0.2.3a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.3...0.2.4a1)
 
 **Merged pull requests:**
 
-- fix: only register resting\_screen if GUI [\#20](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/20) ([JarbasAl](https://github.com/JarbasAl))
+- fix: gui images [\#22](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/22) ([JarbasAl](https://github.com/JarbasAl))
 
-## [V0.2.2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.2) (2024-11-15)
+## [V0.2.3](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.3) (2024-11-16)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.2...V0.2.2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.3...V0.2.3)
 
 
 
