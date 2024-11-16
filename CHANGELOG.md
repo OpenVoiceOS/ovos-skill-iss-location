@@ -1,26 +1,16 @@
 # Changelog
 
-## [0.2.2a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.2a2) (2024-11-15)
+## [0.2.3a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.3a1) (2024-11-16)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.2a1...0.2.2a2)
-
-**Merged pull requests:**
-
-- fix: optional gui and missing skilljson [\#19](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/19) ([JarbasAl](https://github.com/JarbasAl))
-- da-dk/translate [\#17](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/17) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- accepted addition translation [\#11](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/11) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
-## [0.2.2a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.2a1) (2024-10-26)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.1...0.2.2a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.2...0.2.3a1)
 
 **Merged pull requests:**
 
-- de-de/translate [\#16](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/16) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- fix: only register resting\_screen if GUI [\#20](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/20) ([JarbasAl](https://github.com/JarbasAl))
 
-## [V0.2.1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.1) (2024-10-15)
+## [V0.2.2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.2) (2024-11-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.1...V0.2.1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.2...V0.2.2)
 
 
 
