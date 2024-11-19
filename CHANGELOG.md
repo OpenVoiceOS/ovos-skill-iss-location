@@ -1,16 +1,16 @@
 # Changelog
 
-## [0.2.4a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.4a1) (2024-11-16)
+## [0.2.5a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.5a1) (2024-11-19)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.3...0.2.4a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.4...0.2.5a1)
 
 **Merged pull requests:**
 
-- fix: gui images [\#22](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/22) ([JarbasAl](https://github.com/JarbasAl))
+- fix:allow workshop 3.0.0 [\#24](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/24) ([JarbasAl](https://github.com/JarbasAl))
 
-## [V0.2.3](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.3) (2024-11-16)
+## [V0.2.4](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.4) (2024-11-16)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.3...V0.2.3)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.4...V0.2.4)
 
 
 
