@@ -1,0 +1,17 @@
+{
+  "skill_id": "ovos-skill-iss-location.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-iss-location",
+  "name": "Seguiment de l'estació espacial internacional (ISS Tracker)",
+  "description": "Seguiment de la ubicació de l'EEI",
+  "examples": [
+    "On és l'EEI",
+    "Qui hi ha a bord de l'estació espacial?",
+    "Quan passa l'EEI per sobre?",
+    "Parla'm de l'EEI",
+    "Quantes persones hi ha a bord de l'estació espacial?"
+  ],
+  "tags": [
+    "preguntes",
+    "espai"
+  ]
+}
