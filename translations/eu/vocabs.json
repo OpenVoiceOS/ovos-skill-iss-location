@@ -1,0 +1,25 @@
+{
+    "how_many.voc": [
+        "zenbat",
+        "zenbaki",
+        "guztira"
+    ],
+    "onboard.voc": [
+        "barruan",
+        "barruan",
+        "(gainean|-an|-ean)",
+        "egoten"
+    ],
+    "who.voc": [
+        "(nor|nork)",
+        "jende",
+        "pertsona",
+        "pertsonak"
+    ],
+    "iss.voc": [
+        "N E E",
+        "NEE",
+        "nazioarteko estazio espaziala",
+        "estazio espaziala"
+    ]
+}
