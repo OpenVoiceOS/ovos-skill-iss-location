@@ -1,16 +1,16 @@
 # Changelog
 
-## [0.2.9a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.9a1) (2024-12-02)
+## [0.2.10a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.10a1) (2024-12-02)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.8...0.2.9a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.9...0.2.10a1)
 
 **Merged pull requests:**
 
-- import galician translations [\#32](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/32) ([JarbasAl](https://github.com/JarbasAl))
+- import basque translations [\#34](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/34) ([JarbasAl](https://github.com/JarbasAl))
 
-## [V0.2.8](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.8) (2024-11-30)
+## [V0.2.9](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.9) (2024-12-02)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.8...V0.2.8)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.9...V0.2.9)
 
 
 
