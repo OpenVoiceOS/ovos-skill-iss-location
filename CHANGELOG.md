@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.11a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.11a2) (2025-01-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.11a1...0.2.11a2)
+
+**Merged pull requests:**
+
+- Fix autos [\#38](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/38) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.11a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.11a1) (2025-01-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.10...0.2.11a1)
