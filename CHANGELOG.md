@@ -1,20 +1,12 @@
 # Changelog
 
-## [0.2.11a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.11a1) (2025-01-25)
+## [0.2.12a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.12a1) (2025-01-27)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.10...0.2.11a1)
-
-**Closed issues:**
-
-- Skill not working without GUI [\#18](https://github.com/OpenVoiceOS/ovos-skill-iss-location/issues/18)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.11...0.2.12a1)
 
 **Merged pull requests:**
 
-- fix: catalan [\#36](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/36) ([JarbasAl](https://github.com/JarbasAl))
-
-## [V0.2.10](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.10) (2024-12-02)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.10...V0.2.10)
+- fix:catalan intents punctuation [\#40](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/40) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
