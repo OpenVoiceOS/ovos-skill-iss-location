@@ -1,19 +1,19 @@
 {
-  "when_iss.intent": [
-    "quan passa (l'|s'|)estació espacial (internacional|) (per|per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)",
-    "quan passa (la|sa) (ISS|I S S|EEI|E E I) (per|per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)",
-    "quan (estarà|passarà|serà) (l'|s'|)estació espacial (internacional|) (per|per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)",
-    "quan serà la (ISS|I S S|EEI|E E I) (per|per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)"
-  ],
-  "where_iss.intent": [
-    "on és (l'|s'|)estació espacial (internacional|)",
-    "(quina és|digue'm|explica'm|digues-me) (la|sa) (ubicació|posició) de (l'|s'|)estació espacial (internacional|)",
-    "(ubicació|posició) de (l'|s'|)estació espacial (internacional|)",
-    "on és (la|sa) (ISS|I S S|EEI|E E I)",
-    "(quina és|digue'm|explica'm|digues-me) (la|sa) (ubicació|posició) de (la|sa) (ISS|I S S|EEI|E I I)",
-    "(ubicació|posició) de (la|sa) (ISS|I S S|EEI|E E I)"
-  ],
-  "about.intent": [
-    "(parla('m|) (de|sobre)|què és|informació (de|sobre)) (la|sa|l'|s) (ISS|I S S|EEI|E E I|estació espacial [internacional])"
-  ]
+    "where_iss.intent": [
+        "(quina és|digue'm|explica'm|digues-me) (la|sa) (ubicació|posició) de (l'|s'|)estació espacial (internacional|)",
+        "(quina és|digue'm|explica'm|digues-me) (la|sa) (ubicació|posició) de (la|sa) (ISS|I S S|EEI|E I I)",
+        "(ubicació|posició) de (l'|s'|)estació espacial (internacional|)",
+        "(ubicació|posició) de (la|sa) (ISS|I S S|EEI|E E I)",
+        "on és (l'|s'|)estació espacial (internacional|)",
+        "on és (la|sa) (ISS|I S S|EEI|E E I)"
+    ],
+    "about.intent": [
+        "(parla('m|) (de|sobre)|què és|informació (de|sobre)) (la|sa|l'|s) (ISS|I S S|EEI|E E I|estació espacial [internacional])"
+    ],
+    "when_iss.intent": [
+        "quan (estarà|passarà|serà) (l'|s'|)estació espacial (internacional|) (per|per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)",
+        "quan passa (l'|s'|)estació espacial (internacional|) (per|per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)",
+        "quan passa (la|sa) (ISS|I S S|EEI|E E I) (per|per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)",
+        "quan serà la (ISS|I S S|EEI|E E I) (per|per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)"
+    ]
 }

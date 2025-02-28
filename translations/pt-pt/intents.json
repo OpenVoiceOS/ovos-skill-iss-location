@@ -1,27 +1,23 @@
 {
-  "when_iss.intent": [
-    "quando vai passar a I S S",
-    "quando vai passar a estação espacial",
-    "quando vai passar a  estação espacial internacional",
-    "a estação espacial internacional passa quando"
-  ],
-  "where_iss.intent": [
-    "onde está a I S S",
-    "onde anda a estação espacial",
-    "onde (está|anda) a estação espacial internacional",
-    "localização da estação espacial internacional",
-    "localização da estação espacial",
-    "localização da I S S",
-    "Localização I S S"
-  ],
-  "about.intent": [
-    "(fala|diz-me|conta-me|) sobre a ISS",
-    "(fala|diz-me|conta-me|) sobre a estação espacial (internacional|)",
-    "(fale|diga-me|conte-me|) sobre a estação espacial (internacional|)",
-    "o que é (a|) ISS",
-    "[UNUSED]",
-    "[UNUSED]",
-    "[UNUSED]",
-    "[UNUSED]"
-  ]
+    "where_iss.intent": [
+        "Localização I S S",
+        "localização da I S S",
+        "localização da estação espacial",
+        "localização da estação espacial internacional",
+        "onde (está|anda) a estação espacial internacional",
+        "onde anda a estação espacial",
+        "onde está a I S S"
+    ],
+    "about.intent": [
+        "(fala|diz-me|conta-me|) sobre a ISS",
+        "(fala|diz-me|conta-me|) sobre a estação espacial (internacional|)",
+        "(fale|diga-me|conte-me|) sobre a estação espacial (internacional|)",
+        "o que é (a|) ISS"
+    ],
+    "when_iss.intent": [
+        "a estação espacial internacional passa quando",
+        "quando vai passar a I S S",
+        "quando vai passar a estação espacial",
+        "quando vai passar a estação espacial internacional"
+    ]
 }
