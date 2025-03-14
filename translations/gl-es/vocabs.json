@@ -1,25 +1,25 @@
 {
-    "how_many.voc": [
-        "cantos",
-        "número",
-        "total"
-    ],
-    "onboard.voc": [
-        "a bordo",
-        "a bordo",
-        "no",
-        "dentro"
-    ],
-    "who.voc": [
-        "xente",
-        "persoa",
-        "persoas",
-        "quen"
-    ],
-    "iss.voc": [
-        "E E I",
-        "EEI",
-        "estación espacial internacional",
-        "estación espacial"
-    ]
+  "how_many.voc": [
+    "cantas",
+    "número",
+    "total"
+  ],
+  "onboard.voc": [
+    "a bordo",
+    "no",
+    "a bordo",
+    "dentro"
+  ],
+  "who.voc": [
+    "quen",
+    "persoa",
+    "persoas",
+    "xente"
+  ],
+  "iss.voc": [
+    "EEI",
+    "E E I",
+    "estación espacial",
+    "estación espacial internacional"
+  ]
 }
