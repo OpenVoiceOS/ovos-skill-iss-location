@@ -1,12 +1,16 @@
 # Changelog
 
-## [0.2.12a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.12a1) (2025-01-27)
+## [0.2.13a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.13a2) (2025-03-14)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.11...0.2.12a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.13a1...0.2.13a2)
 
 **Merged pull requests:**
 
-- fix:catalan intents punctuation [\#40](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/40) ([JarbasAl](https://github.com/JarbasAl))
+- gl/translate [\#43](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/43) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [0.2.13a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.13a1) (2025-02-27)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.12...0.2.13a1)
 
 
 

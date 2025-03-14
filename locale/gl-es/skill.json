@@ -1,0 +1,17 @@
+{
+  "skill_id": "ovos-skill-iss-location.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-iss-location",
+  "name": "Rastrexador da EEI",
+  "description": "Rastrexa a localización da EEI",
+  "examples": [
+    "Onde está a EEI?",
+    "Quen está a bordo da estación espacial?",
+    "Cando pasa a EEI?",
+    "Fálame da EEI",
+    "cantas persoas están a bordo da estación espacial"
+  ],
+  "tags": [
+    "Trivia",
+    "espazo"
+  ]
+}
