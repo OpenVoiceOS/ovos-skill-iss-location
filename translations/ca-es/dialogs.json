@@ -21,7 +21,7 @@
     "La podreu veure durant {duration}"
   ],
   "location.when.dialog": [
-    "L'E E I serà sobre {toponnym} d'aquí a {duration}",
+    "L'E E I serà sobre {toponym} d'aquí a {duration}",
     "L'estació espacial internacional serà a {toponym} d'aqui a {duration}",
     "L'estació espacial serà a {toponym} d'aquí a {duration}"
   ],
