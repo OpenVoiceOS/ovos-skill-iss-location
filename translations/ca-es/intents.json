@@ -1,9 +1,9 @@
 {
   "when_iss.intent": [
-    "quan passa (l'|s'|)estació espacial (internacional|) (per|per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)",
-    "quan passa (la|sa) (ISS|I S S|EEI|E E I) (per|per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)",
-    "quan (estarà|passarà|serà) (l'|s'|)estació espacial (internacional|) (per|per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)",
-    "quan serà la (ISS|I S S|EEI|E E I) (per|per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)"
+    "quan passa (l'|s'|)estació espacial (internacional|) (per|per sobre|a dalt|a sobre|) (nostre|jo|meu|nosaltres|)",
+    "[quan passa] (l'|s'|)(ISS|I S S|EEI|E E I|estació espacial) (per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)",
+    "quan (estarà|passarà|serà) (l'|s'|)estació espacial (internacional|) (per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)",
+    "quan serà (sa|la) (ISS|I S S|EEI|E E I|estació espacial) (per|per sobre|a dalt|a sobre) (nostre|jo|meu|nosaltres|)"
   ],
   "where_iss.intent": [
     "on és (l'|s'|)estació espacial (internacional|)",
@@ -14,6 +14,6 @@
     "(ubicació|posició) de (la|sa) (ISS|I S S|EEI|E E I)"
   ],
   "about.intent": [
-    "(parla('m|) (de|sobre)|què és|informació (de|sobre)) (la|sa|l'|s) (ISS|I S S|EEI|E E I|estació espacial [internacional])"
+    "parla('m|) (de|sobre) [què és] (la|sa|l'|s) (ISS|I S S|EEI|E E I|estació espacial [internacional])"
   ]
 }
