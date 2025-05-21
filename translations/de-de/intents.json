@@ -12,8 +12,5 @@
     "wo ist die (ISS|I S S)",
     "(Zeige mir|nenne mir|sag mir) den (ISS|I S S) Standort",
     "Standort der (ISS|I S S)"
-  ],
-  "about.intent": [
-    "erzähle mir von der (internationalen|) Raumstation\nwas ist die (internationale|) Raumstation"
   ]
 }

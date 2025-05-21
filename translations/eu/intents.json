@@ -12,8 +12,5 @@
         "non kokatzen da (nazioarteko|) estazio espaziala?",
         "non dago (NEE|N E E)?",
         "non dago (nazioarteko|) estazio espaziala?"
-    ],
-    "about.intent": [
-        "(hainbat datu|kontadazu|jakingarriak|informazioa) (nazioarteko|) estazio espazialari buruz"
     ]
 }
