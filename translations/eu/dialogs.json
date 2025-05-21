@@ -1,7 +1,4 @@
 {
-    "about.dialog": [
-        "Nazioarteko Estazio Espaziala Lurraren orbita baxuan dagoen estazio espazial modular bat da. NEE programa bost espazio-agentzien arteko nazio anitzeko lankidetza-proiektua da: NASA (Estatu Batuak). Roscosmos (Errusia). JAXA (Japonia). ESA (Europa). eta CSA (Kanada).Estazio espazialaren jabetza eta erabilera gobernuen arteko itun eta akordioen bitartez ezartzen dira."
-    ],
     "location.unknown.dialog": [
         "NEE {latitude} latitudearen {longitude} longitudearen gainean dago orain, baina ez dagokio ezein elementu geografikori",
         "Estazio espaziala {latitude} latitudean {longitude} longitudean dago, baina ez dakit non dagoen hori"

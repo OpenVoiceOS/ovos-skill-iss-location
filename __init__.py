@@ -143,17 +143,6 @@ class ISSLocationSkill(OVOSSkill):
         plt.close()
         return output
 
-    @intent_handler("about.intent")
-    def handle_about_iss_intent(self, message):
-        utterance = self.dialog_renderer.render("about", {})
-        self.gui.show_image(self.settings.get("iss_bg", "iss.png"),
-                            override_idle=True,
-                            fill='PreserveAspectFit',
-                            caption=utterance)
-        self.speak(utterance, wait=True)
-        sleep(1)
-        self.gui.clear()
-
     @intent_handler('where_iss.intent')
     def handle_iss(self, message):
         toponym, lat, lon, astronauts = self.get_iss_data()

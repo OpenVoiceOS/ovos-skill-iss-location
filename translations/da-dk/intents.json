@@ -12,8 +12,5 @@
     "hvor er (ISS|I S S)",
     "(hvad er|fortæl mig) placeringen af (ISS|I S S).",
     "placeringen af ​​(ISS|I S S)"
-  ],
-  "about.intent": [
-    "(tal om|fortæl mig om|hvad er|info om) (den internationale|) (rumstation|rumstationen)"
   ]
 }

@@ -12,8 +12,5 @@
     "posición da estación espacial (internacional|)",
     "onde fica a (EEI|E E I)",
     "onde fica a estación espacial (internacional|)"
-  ],
-  "about.intent": [
-    "(fálame|cóntame sobre|que é|información sobre) a estación espacial (internacional|)"
   ]
 }
