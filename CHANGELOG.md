@@ -1,16 +1,24 @@
 # Changelog
 
+## [0.2.17a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.17a2) (2025-12-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.17a1...0.2.17a2)
+
+**Merged pull requests:**
+
+- chore: Configure Renovate [\#52](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/52) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.2.17a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.17a1) (2025-11-23)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.16...0.2.17a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.16...0.2.17a1)
+
+**Fixed bugs:**
+
+- feature - image optional [\#7](https://github.com/OpenVoiceOS/ovos-skill-iss-location/issues/7)
 
 **Merged pull requests:**
 
 - es-es/translate [\#50](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/50) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
-## [V0.2.16](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.16) (2025-06-08)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.16...V0.2.16)
 
 
 
