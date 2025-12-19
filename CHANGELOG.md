@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.17a3](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.17a3) (2025-12-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.17a2...0.2.17a3)
+
+**Merged pull requests:**
+
+- chore\(deps\): update actions/setup-python action to v6 [\#57](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/57) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.2.17a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.17a2) (2025-12-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.17a1...0.2.17a2)
@@ -10,7 +18,7 @@
 
 ## [0.2.17a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.17a1) (2025-11-23)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.16...0.2.17a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.16...0.2.17a1)
 
 **Fixed bugs:**
 
@@ -19,6 +27,10 @@
 **Merged pull requests:**
 
 - es-es/translate [\#50](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/50) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [V0.2.16](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.16) (2025-06-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.16...V0.2.16)
 
 
 
