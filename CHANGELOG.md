@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.17a4](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.17a4) (2025-12-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.17a3...0.2.17a4)
+
+**Merged pull requests:**
+
+- chore\(deps\): update stefanzweifel/git-auto-commit-action action to v7 [\#60](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/60) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.2.17a3](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.17a3) (2025-12-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.17a2...0.2.17a3)
