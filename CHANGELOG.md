@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.17a7](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.17a7) (2026-01-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.17a6...0.2.17a7)
+
+**Merged pull requests:**
+
+- es-es/translate [\#63](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/63) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
 ## [0.2.17a6](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.17a6) (2025-12-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.17a5...0.2.17a6)
