@@ -1,7 +1,7 @@
 {
   "when_iss.intent": [
     "Cuándo (pasa|pasará) la estación espacial (internacional|) por encima (de nosotros|mío|nuestro)",
-    null,
+    "Cuándo (pasa|pasará) la (EEI|ISS) por encima (de nosotros|mío|nuestro)",
     "Cuándo (va a estar|estará) la estación espacial (internacional|) por encima (de nosotros|mío|nuestro)",
     "Cuándo (va a estar|estará) la (EEI|ISS) por encima (de nosotros|mío|nuestro)"
   ],
