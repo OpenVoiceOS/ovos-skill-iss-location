@@ -1,0 +1,24 @@
+{
+    "how_many.voc": [
+        "combien",
+        "nombre",
+        "total"
+    ],
+    "iss.voc": [
+        "I S S",
+        "ISS",
+        "station spatiale",
+        "station spatiale internationale"
+    ],
+    "onboard.voc": [
+        "\u00e0 bord",
+        "dans la",
+        "sur la"
+    ],
+    "who.voc": [
+        "astronautes",
+        "personne",
+        "personnes",
+        "qui"
+    ]
+}
