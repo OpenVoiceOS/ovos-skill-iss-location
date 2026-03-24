@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.18a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.18a1) (2026-03-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.17a7...0.2.18a1)
+
+**Merged pull requests:**
+
+- fix: rename bare lang code locale directories [\#65](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/65) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- Add fr-fr locale [\#64](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/64) ([goldyfruit](https://github.com/goldyfruit))
+- chore\(deps\): update actions/checkout action to v6 [\#54](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/54) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.2.17a7](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.17a7) (2026-01-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.17a6...0.2.17a7)
