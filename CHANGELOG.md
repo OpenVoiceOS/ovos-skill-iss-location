@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.18a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.18a2) (2026-04-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.18a1...0.2.18a2)
+
+**Merged pull requests:**
+
+- ci: modernize GitHub workflows [\#68](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/68) ([JarbasAl](https://github.com/JarbasAl))
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#67](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/67) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.18a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.18a1) (2026-03-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.17a7...0.2.18a1)
@@ -61,10 +70,6 @@
 ## [0.2.17a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.17a1) (2025-11-23)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.16...0.2.17a1)
-
-**Fixed bugs:**
-
-- feature - image optional [\#7](https://github.com/OpenVoiceOS/ovos-skill-iss-location/issues/7)
 
 **Merged pull requests:**
 
