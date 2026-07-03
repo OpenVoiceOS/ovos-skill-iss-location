@@ -153,12 +153,12 @@ class ISSLocationSkill(OVOSSkill):
                                 fill='PreserveAspectFit')
 
         if toponym == "unknown":
-            self.speak_dialog("location.unknown", {
+            self.speak_dialog("location_unknown", {
                 "latitude": lat,
                 "longitude": lon
             }, wait=True)
         else:
-            self.speak_dialog("location.current", {
+            self.speak_dialog("location_current", {
                 "latitude": lat,
                 "longitude":lon,
                 "toponym": toponym
@@ -183,7 +183,7 @@ class ISSLocationSkill(OVOSSkill):
             image = self.generate_map(lat, lon)
             self.gui.show_image(image, caption=caption, fill='PreserveAspectFit')
 
-        self.speak_dialog("location.when", {
+        self.speak_dialog("location_when", {
             "duration": duration,
             "toponym": self.location_pretty
         }, wait=True)
