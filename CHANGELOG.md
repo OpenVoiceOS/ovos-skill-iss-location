@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.18a4](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.18a4) (2026-07-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.18a3...0.2.18a4)
+
+**Merged pull requests:**
+
+- Improve en-US ISS intent definitions + fix INTENT-2 §2 base names [\#73](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/73) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.18a3](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.18a3) (2026-04-09)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.18a2...0.2.18a3)
