@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.18a5](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.18a5) (2026-07-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.18a4...0.2.18a5)
+
+**Merged pull requests:**
+
+- fix: allow ovos-workshop 9.x [\#75](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/75) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.18a4](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.18a4) (2026-07-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.18a3...0.2.18a4)
