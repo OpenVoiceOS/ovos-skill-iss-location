@@ -234,7 +234,7 @@ class ISSLocationSkill(OVOSSkill):
 class SatellitePredictions:
     # taken from https://github.com/yuvadm/iss.guru/blob/master/iss/predictions.py
     ISS = "ISS (ZARYA)"
-    STATIONS_URL = "http://celestrak.com/NORAD/elements/stations.txt"
+    STATIONS_URL = "https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=tle"
 
     def __init__(self, lat, lon, altitude=0, tz="UTC", satellite=ISS, start=None, days=10):
         self.lat = lat
