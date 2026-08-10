@@ -17,3 +17,4 @@ jobs:
       system_deps: 'swig libfann-dev'
       test_path: 'test/end2end/'
       pre_release: true
+      pytest_workers: '0'
