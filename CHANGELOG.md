@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.18a7](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.18a7) (2026-08-10)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.18a6...0.2.18a7)
+
+**Merged pull requests:**
+
+- chore: add ovoscope end2end intent-routing tests [\#72](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/72) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.18a6](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.18a6) (2026-08-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.18a5...0.2.18a6)
