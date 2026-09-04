@@ -51,6 +51,11 @@ NEGATIVE_UTTERANCES = [
     ("what's my ip address", "ovos-skill-ip.openvoiceos"),
     ("set a timer for 5 minutes", "ovos-skill-alerts.openvoiceos"),
     ("who was Joan Fuster", "ovos-skill-fuster-quotes.openvoiceos"),
+    ("can you tell me where I am", "ovos-skill-diagnostics.openvoiceos"),
+    ("show me where my phone is", "ovos-skill-ip.openvoiceos"),
+    ("what time will the movie start tonight", "ovos-skill-showtimes.openvoiceos"),
+    ("how many people live in this city", "ovos-skill-wikipedia.openvoiceos"),
+    ("who is on board the flight", "ovos-skill-flight-tracker.openvoiceos"),
 ]
 
 
