@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.3.0a1) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.19a1...0.3.0a1)
+
+**Merged pull requests:**
+
+- feat: kab, pt-BR, nl-NL, sv-SE locale parity [\#87](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/87) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.19a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.19a1) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.18a8...0.2.19a1)
