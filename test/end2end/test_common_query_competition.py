@@ -70,7 +70,12 @@ class _GreedyCommonQueryCompetitor:
     def _answer(self, message):
         self.queried.append(message.data.get("phrase"))
         phrase = message.data.get("phrase", "")
-        self.bus.emit(message.response({
+        # ``question:query`` is a dispatch topic (it contains ``:``), so it
+        # has no ``.response`` shorthand counterpart (OVOS-MSG-1 §5.3): the
+        # answering component names the answering topic explicitly and
+        # derives via ``reply`` instead. ``reply`` still performs the same
+        # §5.2 source/destination reversal that ``response`` builds on.
+        self.bus.emit(message.reply("question:query.response", {
             "phrase": phrase,
             "skill_id": self.SKILL_ID,
             "answer": f"here is a generic answer about {phrase}",
