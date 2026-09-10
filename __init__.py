@@ -379,10 +379,6 @@ class SatellitePredictions:
 if __name__ == "__main__":
     from ovos_utils.fakebus import FakeBus
     from ovos_bus_client.message import Message
-    from ovos_config.locale import setup_locale
-
-    setup_locale()
-
 
     # print speak for debugging
     def spk(utt, *args, **kwargs):
