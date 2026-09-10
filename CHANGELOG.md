@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.4.1a1) (2026-09-10)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.4.0a2...0.4.1a1)
+
+**Merged pull requests:**
+
+- fix: remove dead no-argument setup\_locale\(\) call [\#94](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/94) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.4.0a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.4.0a2) (2026-09-10)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.4.0a1...0.4.0a2)
