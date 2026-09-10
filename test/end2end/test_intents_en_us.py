@@ -110,7 +110,7 @@ class TestISSLocationIntentsEnUS(unittest.TestCase):
         capture.capture(utterance, timeout=30)
         return capture.finish()
 
-    def _assert_intent(self, text, intent, expected_dialog=None):
+    def _assert_intent(self, text, intent, expected_dialog=None, expected_data=None):
         messages = self._run(text)
         types = [m.msg_type for m in messages]
         self.assertTrue(
@@ -138,6 +138,25 @@ class TestISSLocationIntentsEnUS(unittest.TestCase):
                 expected_dialog, dialogs,
                 f"{text!r}: expected dialog {expected_dialog!r} among {dialogs!r}",
             )
+        if expected_data is not None:
+            # The interesting effect isn't "a dialog fired", it's what the
+            # handler DERIVED from the fixture: the astronaut roster
+            # filtered down to craft == "ISS" (dropping "Not On The ISS",
+            # who is on Tiangong) and, for the count, its length. A handler
+            # that forgets the craft filter, or hardcodes a count, still
+            # picks the right dialog but fails this.
+            matches = [
+                m for m in speak_msgs
+                if m.data.get("meta", {}).get("dialog") == expected_dialog
+            ]
+            self.assertTrue(matches, f"{text!r}: no speak message used dialog {expected_dialog!r}")
+            rendered_data = matches[0].data.get("meta", {}).get("data", {})
+            for key, value in expected_data.items():
+                self.assertEqual(
+                    rendered_data.get(key), value,
+                    f"{text!r}: dialog {expected_dialog!r} data[{key!r}] = "
+                    f"{rendered_data.get(key)!r}, expected {value!r}",
+                )
 
     def test_where_is_the_iss(self):
         # "location_current" vs "location_unknown" depends on the live
@@ -153,11 +172,22 @@ class TestISSLocationIntentsEnUS(unittest.TestCase):
         )
 
     def test_who_is_onboard(self):
-        self._assert_intent("who is on board the ISS", "who_iss.intent", expected_dialog="who")
+        # _FAKE_ISS_DATA carries a third astronaut on "Tiangong", not the
+        # ISS -- deliberately, to prove the handler applies the
+        # craft == "ISS" filter rather than just relaying the raw list.
+        iss_crew = ", ".join(
+            p["name"] for p in _FAKE_ISS_DATA[3] if p["craft"] == "ISS"
+        )
+        self._assert_intent(
+            "who is on board the ISS", "who_iss.intent", expected_dialog="who",
+            expected_data={"people": iss_crew},
+        )
 
     def test_how_many_onboard(self):
+        iss_crew_count = sum(1 for p in _FAKE_ISS_DATA[3] if p["craft"] == "ISS")
         self._assert_intent(
-            "how many are on board the ISS", "number_iss.intent", expected_dialog="number"
+            "how many are on board the ISS", "number_iss.intent", expected_dialog="number",
+            expected_data={"number": iss_crew_count},
         )
 
     def test_api_failure_speaks_gracefully(self):
