@@ -398,5 +398,3 @@ if __name__ == "__main__":
     s.handle_when(Message(""))
     # The I S S will be over XXX in seven minutes twenty five seconds
     # It will be visible during seven minutes twenty five seconds
-    s.handle_about_iss_intent(Message(""))
-    # The International Space Station is a modular space station in low Earth orbit. The ISS programme is a multi-national collaborative project between five participating space agencies: NASA ( United States ) , Roscosmos ( Russia ) , JAXA ( Japan ) , ESA ( Europe ) , and CSA ( Canada ) .The ownership and use of the space station is established by intergovernmental treaties and agreements.
