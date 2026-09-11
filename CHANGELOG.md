@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.4.1a2) (2026-09-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.4.1a1...0.4.1a2)
+
+**Merged pull requests:**
+
+- test: assert derived crew data, not just the dialog name, in iss e2e suite [\#96](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/96) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.4.1a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.4.1a1) (2026-09-10)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.4.0a2...0.4.1a1)
