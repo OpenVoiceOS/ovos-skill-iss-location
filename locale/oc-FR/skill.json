@@ -1,0 +1,17 @@
+{
+  "skill_id": "ovos-skill-iss-location.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-iss-location",
+  "name": "Seguiment de l'estacion espaciala internacionala",
+  "description": "Sègue la posicion de l'estacion espaciala internacionala",
+  "examples": [
+    "Ont es l'E E I",
+    "Qual es a bòrd de l'estacion espaciala?",
+    "Quand passarà l'E E I dessús",
+    "Parla-me de l'E E I",
+    "quantas personas i a a bòrd de l'estacion espaciala"
+  ],
+  "tags": [
+    "questions",
+    "espaci"
+  ]
+}

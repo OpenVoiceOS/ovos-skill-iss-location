@@ -8,9 +8,15 @@ import requests
 from ovos_date_parser import nice_duration
 from ovos_utils.time import to_local, now_local
 from ovos_workshop.decorators import intent_handler
-from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
 from skyfield.api import Topos, load
+
+class ISSDataUnavailable(Exception):
+    """Raised when the live ISS position / astronaut roster APIs can't be
+    fetched or parsed (network failure, or a non-JSON/empty response body
+    -- api.open-notify.org is known to intermittently return an empty body
+    instead of a valid error response)."""
+
 
 try:
     import matplotlib.pyplot as plt
@@ -52,8 +58,22 @@ class ISSLocationSkill(OVOSSkill):
         return GUI and self.settings["enable_gui"]
 
     def get_iss_data(self):
-        data = requests.get("http://api.open-notify.org/iss-now.json").json()
-        astronauts = requests.get("http://api.open-notify.org/astros.json").json()
+        # api.open-notify.org is known to intermittently return an empty
+        # body (instead of a valid JSON error), which raises a raw
+        # requests.exceptions.JSONDecodeError from .json() -- catch that
+        # and any request-level failure here, at the fetch seam, and
+        # surface it as one clean, callers-can-handle exception rather
+        # than letting either propagate raw.
+        try:
+            data = requests.get("http://api.open-notify.org/iss-now.json").json()
+            # the astros.json endpoint returns {"people": [...], "number": N,
+            # "message": "success"}, not a bare list -- iterating the raw
+            # response iterates its string keys instead of the astronaut
+            # dicts, crashing every caller's `p["craft"]`/`p["name"]` lookup.
+            astronauts = requests.get("http://api.open-notify.org/astros.json").json()["people"]
+        except (requests.exceptions.RequestException, ValueError, KeyError) as e:
+            raise ISSDataUnavailable("failed to fetch/parse ISS position or "
+                                      "astronaut roster") from e
 
         lat = data['iss_position']['latitude']
         lon = data['iss_position']['longitude']
@@ -97,13 +117,17 @@ class ISSLocationSkill(OVOSSkill):
             self.gui['lat'] = lat
             self.gui['lon'] = lon
             self.gui['toponym'] = toponym
-            self.gui["astronauts"] = astronauts["people"]
+            self.gui["astronauts"] = astronauts
             self.set_context("iss")
         except Exception as e:
             self.log.exception(e)
 
     def idle(self, message):
-        toponym, lat, lon, astronauts = self.get_iss_data()
+        try:
+            toponym, lat, lon, astronauts = self.get_iss_data()
+        except ISSDataUnavailable as e:
+            self.log.warning(e)
+            return
         self.update_picture(toponym, lat, lon, astronauts)  # values available in self.gui
         self.gui.show_image(self.gui['imgLink'], fill='PreserveAspectFit')
 
@@ -145,7 +169,11 @@ class ISSLocationSkill(OVOSSkill):
 
     @intent_handler('where_iss.intent')
     def handle_iss(self, message):
-        toponym, lat, lon, astronauts = self.get_iss_data()
+        try:
+            toponym, lat, lon, astronauts = self.get_iss_data()
+        except ISSDataUnavailable:
+            self.speak_dialog("api_unavailable", wait=True)
+            return
         if self.use_gui:
             self.update_picture(toponym, lat, lon, astronauts)
             self.gui.show_image(self.gui['imgLink'],
@@ -153,12 +181,12 @@ class ISSLocationSkill(OVOSSkill):
                                 fill='PreserveAspectFit')
 
         if toponym == "unknown":
-            self.speak_dialog("location.unknown", {
+            self.speak_dialog("location_unknown", {
                 "latitude": lat,
                 "longitude": lon
             }, wait=True)
         else:
-            self.speak_dialog("location.current", {
+            self.speak_dialog("location_current", {
                 "latitude": lat,
                 "longitude":lon,
                 "toponym": toponym
@@ -183,7 +211,7 @@ class ISSLocationSkill(OVOSSkill):
             image = self.generate_map(lat, lon)
             self.gui.show_image(image, caption=caption, fill='PreserveAspectFit')
 
-        self.speak_dialog("location.when", {
+        self.speak_dialog("location_when", {
             "duration": duration,
             "toponym": self.location_pretty
         }, wait=True)
@@ -192,10 +220,13 @@ class ISSLocationSkill(OVOSSkill):
         }, wait=True)
         self.gui.release()
 
-    @intent_handler(IntentBuilder("WhoISSIntent").require("who").
-                    require("onboard").require("iss"))
+    @intent_handler('who_iss.intent')
     def handle_who(self, message):
-        toponym, lat, lon, astronauts = self.get_iss_data()
+        try:
+            toponym, lat, lon, astronauts = self.get_iss_data()
+        except ISSDataUnavailable:
+            self.speak_dialog("api_unavailable", wait=True)
+            return
         people = [
             p["name"] for p in astronauts
             if p["craft"] == "ISS"
@@ -211,21 +242,27 @@ class ISSLocationSkill(OVOSSkill):
         sleep(1)
         self.gui.release()
 
-    @intent_handler(IntentBuilder("NumberISSIntent").require("how_many")
-                    .require("onboard").require("iss"))
+    @intent_handler('number_iss.intent')
     def handle_number(self, message):
-
-        toponym, lat, lon, astronauts = self.get_iss_data()
+        try:
+            toponym, lat, lon, astronauts = self.get_iss_data()
+        except ISSDataUnavailable:
+            self.speak_dialog("api_unavailable", wait=True)
+            return
         people = [
             p["name"] for p in astronauts
             if p["craft"] == "ISS"
         ]
         num = len(people)
         people = ", ".join(people)
-        self.gui.show_image(self.settings["iss_bg"],
-                            override_idle=True,
-                            fill='PreserveAspectFit',
-                            caption=people)
+        # unlike handle_who, this call was unguarded -- self.settings has no
+        # "iss_bg" default and self.use_gui is False out of the box, so this
+        # crashed with KeyError('iss_bg') on every default-config install.
+        if self.use_gui:
+            self.gui.show_image(self.settings["iss_bg"],
+                                override_idle=True,
+                                fill='PreserveAspectFit',
+                                caption=people)
         self.speak_dialog("number", {"number": num}, wait=True)
         sleep(1)
         self.gui.release()
@@ -234,7 +271,7 @@ class ISSLocationSkill(OVOSSkill):
 class SatellitePredictions:
     # taken from https://github.com/yuvadm/iss.guru/blob/master/iss/predictions.py
     ISS = "ISS (ZARYA)"
-    STATIONS_URL = "http://celestrak.com/NORAD/elements/stations.txt"
+    STATIONS_URL = "https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=tle"
 
     def __init__(self, lat, lon, altitude=0, tz="UTC", satellite=ISS, start=None, days=10):
         self.lat = lat
@@ -342,10 +379,6 @@ class SatellitePredictions:
 if __name__ == "__main__":
     from ovos_utils.fakebus import FakeBus
     from ovos_bus_client.message import Message
-    from ovos_config.locale import setup_locale
-
-    setup_locale()
-
 
     # print speak for debugging
     def spk(utt, *args, **kwargs):
