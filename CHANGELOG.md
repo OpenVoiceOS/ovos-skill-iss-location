@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.2a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.4.2a1) (2026-09-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.4.1a2...0.4.2a1)
+
+**Merged pull requests:**
+
+- fix: use reply\(\) not response\(\) for dispatch-topic replies in e2e test [\#91](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/91) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.4.1a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.4.1a2) (2026-09-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.4.1a1...0.4.1a2)
