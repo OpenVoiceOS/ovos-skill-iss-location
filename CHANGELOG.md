@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.2a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.4.2a2) (2026-09-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.4.2a1...0.4.2a2)
+
+**Merged pull requests:**
+
+- locale: parity files for ovos-skill-iss-location \(T-1673\) [\#99](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/99) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.4.2a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.4.2a1) (2026-09-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.4.1a2...0.4.2a1)
