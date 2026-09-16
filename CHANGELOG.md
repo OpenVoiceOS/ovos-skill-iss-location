@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.3a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.4.3a1) (2026-09-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.4.2a2...0.4.3a1)
+
+**Merged pull requests:**
+
+- fix: remove stale about-ISS references left after \#47 [\#83](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/83) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.4.2a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.4.2a2) (2026-09-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.4.2a1...0.4.2a2)
