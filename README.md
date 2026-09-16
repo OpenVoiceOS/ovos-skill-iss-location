@@ -15,7 +15,6 @@ Say one of these phrases to the assistant.
 * "Where is the ISS"
 * "Who is on board of the space station"
 * "When is the ISS passing over"
-* "Tell me about the ISS"
 * "How many persons on board of the space station"
 
 ## Related projects
