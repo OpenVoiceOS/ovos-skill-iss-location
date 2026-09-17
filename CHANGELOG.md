@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.0a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.5.0a1) (2026-09-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.4.3a1...0.5.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): fill pt-PT gap against en-US [\#103](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/103) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.4.3a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.4.3a1) (2026-09-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.4.2a2...0.4.3a1)
