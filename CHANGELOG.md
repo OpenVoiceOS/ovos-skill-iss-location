@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.0a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.5.0a2) (2026-09-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.5.0a1...0.5.0a2)
+
+**Merged pull requests:**
+
+- chore: remove dead locale resources [\#104](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/104) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.5.0a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.5.0a1) (2026-09-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.4.3a1...0.5.0a1)
