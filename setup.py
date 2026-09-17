@@ -87,7 +87,7 @@ setup(
     install_requires=get_requirements(),
     extras_require={
         'gui': get_requirements('gui-requirements.txt'),
-        'test': ['ovoscope>=1.0.1a1', 'ovos-adapt-parser>=1.0.9,<2.0.0', 'pytest', 'pytest-timeout'],
+        'test': ['ovoscope>=1.8.0a1,<2.0.0', 'ovos-adapt-parser>=1.0.9,<2.0.0', 'pytest', 'pytest-timeout'],
     },
     keywords='ovos skill plugin',
     entry_points={'ovos.plugin.skill': PLUGIN_ENTRY_POINT}
