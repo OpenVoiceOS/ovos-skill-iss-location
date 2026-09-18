@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.0a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.7.0a2) (2026-09-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.7.0a1...0.7.0a2)
+
+**Merged pull requests:**
+
+- test: golden utterances for every locale [\#110](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/110) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.7.0a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.7.0a1) (2026-09-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.6.0a1...0.7.0a1)
