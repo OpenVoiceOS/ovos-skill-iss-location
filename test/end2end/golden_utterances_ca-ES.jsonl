@@ -1,0 +1,12 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "digue'm la posició de estació espacial", "lang": "ca-ES", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "digue'm la posició de estació espacial internacional", "lang": "ca-ES", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "digue'm la posició de l'estació espacial", "lang": "ca-ES", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "E E I a dalt", "lang": "ca-ES", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "E E I a dalt jo", "lang": "ca-ES", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "E E I a dalt meu", "lang": "ca-ES", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "qui hi ha a la ISS", "lang": "ca-ES", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "qui és a l'espai ara mateix", "lang": "ca-ES", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quins astronautes hi ha a la ISS", "lang": "ca-ES", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quanta gent hi ha a la ISS", "lang": "ca-ES", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quants astronautes hi ha a la ISS", "lang": "ca-ES", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quanta gent hi ha ara mateix a l'espai", "lang": "ca-ES", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}

@@ -1,0 +1,23 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "where 's the space station right now", "lang": "en-US", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "what is the space station current location", "lang": "en-US", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "tell me the space station location", "lang": "en-US", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "when 's the space station going to be above me", "lang": "en-US", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "when 's the space station next visible me", "lang": "en-US", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "when is the ISS pass over", "lang": "en-US", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "who is on board of the ISS", "lang": "en-US", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "who is aboard of the ISS", "lang": "en-US", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "who is on the ISS", "lang": "en-US", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "how many people are on board of the ISS", "lang": "en-US", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "how many are on board of the ISS", "lang": "en-US", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "how many people are aboard the ISS", "lang": "en-US", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "location of the space station", "lang": "en-US", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "location of the I S S", "lang": "en-US", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "location of the ISS", "lang": "en-US", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "location of the international space station", "lang": "en-US", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "when is the space station going to be above", "lang": "en-US", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "when is the space station going to be above me", "lang": "en-US", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "when is the space station going to be above us", "lang": "en-US", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "when is the space station going to be over", "lang": "en-US", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "when is the space station going to be over me", "lang": "en-US", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "I S S aboard people", "lang": "en-US", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "I S S aboard how many", "lang": "en-US", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}

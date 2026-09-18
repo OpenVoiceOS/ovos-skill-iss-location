@@ -1,0 +1,11 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "fortæl mig rumstationens placering", "lang": "da-DK", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "fortæl mig rumstations placering", "lang": "da-DK", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "fortæl mig den internationale rumstationens placering", "lang": "da-DK", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hvornår passerer rumstation forbi", "lang": "da-DK", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hvornår passerer rumstation forbi her", "lang": "da-DK", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hvornår passerer rumstation forbi mig", "lang": "da-DK", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hvem er om bord på ISS", "lang": "da-DK", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hvilke astronauter er på ISS", "lang": "da-DK", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hvor mange mennesker er der om bord på ISS", "lang": "da-DK", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hvor mange astronauter er der på ISS", "lang": "da-DK", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hvor mange mennesker er der i rummet lige nu", "lang": "da-DK", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}

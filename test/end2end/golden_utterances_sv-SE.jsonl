@@ -1,0 +1,12 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "var 's rymdstationen just nu", "lang": "sv-SE", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "vad är rymdstationens nuvarande plats", "lang": "sv-SE", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "berätta rymdstationens plats", "lang": "sv-SE", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "när 's rymdstationen att vara över mig", "lang": "sv-SE", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "när 's rymdstationen nästa gång synlig mig", "lang": "sv-SE", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "när är ISS passera förbi", "lang": "sv-SE", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "vem är ombord på den ISS", "lang": "sv-SE", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "vem befinner sig ombord på den ISS", "lang": "sv-SE", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "vem är på den ISS", "lang": "sv-SE", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hur många människor är ombord på den ISS", "lang": "sv-SE", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hur många är ombord på den ISS", "lang": "sv-SE", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hur många människor är på den ISS", "lang": "sv-SE", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}

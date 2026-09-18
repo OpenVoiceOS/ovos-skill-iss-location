@@ -1,0 +1,12 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "Localização I S S", "lang": "pt-PT", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "localização da I S S", "lang": "pt-PT", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "localização da estação espacial", "lang": "pt-PT", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "a estação espacial internacional passa quando", "lang": "pt-PT", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quando vai passar a estação espacial internacional", "lang": "pt-PT", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quando vai passar a I S S", "lang": "pt-PT", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quem esta na ISS", "lang": "pt-PT", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quem esta agora no espaco", "lang": "pt-PT", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "que astronautas estao na ISS", "lang": "pt-PT", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quantas pessoas estao na ISS", "lang": "pt-PT", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quantos astronautas estao na ISS", "lang": "pt-PT", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quantas pessoas estao agora no espaco", "lang": "pt-PT", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
