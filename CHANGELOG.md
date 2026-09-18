@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.0a3](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.7.0a3) (2026-09-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.7.0a2...0.7.0a3)
+
+**Merged pull requests:**
+
+- locale: native terms in api\_unavailable.dialog for de-DE, da-DK and nl-NL [\#112](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/112) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.7.0a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.7.0a2) (2026-09-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.7.0a1...0.7.0a2)
