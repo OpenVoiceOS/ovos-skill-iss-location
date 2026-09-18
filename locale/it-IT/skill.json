@@ -1,0 +1,17 @@
+{
+  "skill_id": "ovos-skill-iss-location.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-iss-location",
+  "name": "ISS Tracker",
+  "description": "Traccia la posizione della ISS",
+  "examples": [
+    "Dov'è la ISS",
+    "Chi c'è a bordo della stazione spaziale?",
+    "Quando passa la ISS",
+    "Parlami della ISS",
+    "quante persone ci sono a bordo della stazione spaziale"
+  ],
+  "tags": [
+    "Curiosità",
+    "spazio"
+  ]
+}
