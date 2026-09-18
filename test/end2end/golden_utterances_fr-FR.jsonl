@@ -1,0 +1,12 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "donne-moi la position de l'ISS", "lang": "fr-FR", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "où est l'ISS", "lang": "fr-FR", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "où est la station spatiale", "lang": "fr-FR", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quand l'ISS passera au-dessus", "lang": "fr-FR", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quand l'ISS passera au-dessus de moi", "lang": "fr-FR", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quand l'ISS passera au-dessus de nous", "lang": "fr-FR", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "qui est a bord de l'ISS", "lang": "fr-FR", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "qui est dans l'espace en ce moment", "lang": "fr-FR", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quels astronautes sont sur l'ISS", "lang": "fr-FR", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "combien de personnes sont a bord de l'ISS", "lang": "fr-FR", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "combien d'astronautes sont sur l'ISS", "lang": "fr-FR", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "combien de gens sont dans l'espace en ce moment", "lang": "fr-FR", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
