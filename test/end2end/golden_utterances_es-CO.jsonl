@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "¿Dónde está la EEI?", "lang": "es-CO", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "cuantos astronautas hay en la ISS", "lang": "es-CO", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "Cuándo estará la EEI por encima de nosotros", "lang": "es-CO", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
