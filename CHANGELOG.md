@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.0a6](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.7.0a6) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.7.0a5...0.7.0a6)
+
+**Merged pull requests:**
+
+- test: multilang runner reads its locales from the golden files on disk [\#117](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/117) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.7.0a5](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.7.0a5) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.7.0a4...0.7.0a5)
@@ -588,8 +596,6 @@
 **Merged pull requests:**
 
 - fix:update\_requirements [\#14](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/14) ([JarbasAl](https://github.com/JarbasAl))
-- accepted addition translation [\#13](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/13) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- accepted index translation [\#12](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/12) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [V0.1.0](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.1.0) (2024-09-02)
 
