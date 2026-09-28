@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "ISS کجاست", "lang": "fa-IR", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "چه کسانی در ایستگاه فضایی هستند", "lang": "fa-IR", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "چند نفر در ISS هستند", "lang": "fa-IR", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}

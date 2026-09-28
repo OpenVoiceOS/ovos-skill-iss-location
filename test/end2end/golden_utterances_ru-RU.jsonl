@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "где сейчас МКС", "lang": "ru-RU", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "кто на борту МКС", "lang": "ru-RU", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "сколько людей на борту космической станции", "lang": "ru-RU", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
