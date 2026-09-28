@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "gdzie jest ISS", "lang": "pl-PL", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "kto jest na pokładzie ISS", "lang": "pl-PL", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "ile osób jest na pokładzie stacji kosmicznej", "lang": "pl-PL", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}

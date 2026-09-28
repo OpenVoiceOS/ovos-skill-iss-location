@@ -1,0 +1,17 @@
+{
+  "skill_id": "ovos-skill-iss-location.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-iss-location",
+  "name": "Aḍfar n ISS",
+  "description": "Ḍfer amkan n ISS",
+  "examples": [
+    "Anda tella ISS",
+    "Anwa yellan deg tzeqqa n wallal?",
+    "Melmi ara d-tɛeddi ISS",
+    "Ini-yi ɣef ISS",
+    "acḥal n medden deg tzeqqa n wallal"
+  ],
+  "tags": [
+    "Tigawin",
+    "agafay"
+  ]
+}

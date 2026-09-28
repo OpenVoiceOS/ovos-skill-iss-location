@@ -1,0 +1,11 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "begira N E E non dagoen", "lang": "eu-ES", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "begira NEE non dagoen", "lang": "eu-ES", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "N E E noiz egongo da gainean?", "lang": "eu-ES", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "N E E noiz egongo da gainetik?", "lang": "eu-ES", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "N E E noiz egongo da gure gainean?", "lang": "eu-ES", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "nor dago nazioarteko estazio espazialean", "lang": "eu-ES", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "zein astronauta daude ISSan", "lang": "eu-ES", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "nor dago orain espazioan", "lang": "eu-ES", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "zenbat pertsona daude nazioarteko estazio espazialean", "lang": "eu-ES", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "zenbat astronauta daude ISSan", "lang": "eu-ES", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "zenbat pertsona daude orain espazioan", "lang": "eu-ES", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}

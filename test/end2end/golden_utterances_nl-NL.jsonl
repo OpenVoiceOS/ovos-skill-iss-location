@@ -1,0 +1,12 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "waar 's het ruimtestation nu", "lang": "nl-NL", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "wat is de huidige locatie van het ruimtestation", "lang": "nl-NL", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "vertel me de locatie van het ruimtestation", "lang": "nl-NL", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "wanneer 's het ruimtestation gaan zijn boven mij", "lang": "nl-NL", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "wanneer 's het ruimtestation weer zichtbaar bij mij", "lang": "nl-NL", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "wanneer is het ISS passeren over", "lang": "nl-NL", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "wie is aan boord van het ISS", "lang": "nl-NL", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "wie bevindt zich aan boord van het ISS", "lang": "nl-NL", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "wie is op het ISS", "lang": "nl-NL", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hoeveel mensen zijn aan boord van het ISS", "lang": "nl-NL", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hoeveel zijn er aan boord van het ISS", "lang": "nl-NL", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hoeveel mensen zijn er aan boord het ISS", "lang": "nl-NL", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}

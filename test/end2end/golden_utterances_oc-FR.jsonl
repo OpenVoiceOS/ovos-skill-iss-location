@@ -1,0 +1,11 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quina es la posicion actuala de l'estacion espaciala", "lang": "oc-FR", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "digas-me la posicion de l'estacion espaciala", "lang": "oc-FR", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quand es que l'estacion espaciala va passar dessús ieu", "lang": "oc-FR", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quand es que l'estacion espaciala serà visibla ieu", "lang": "oc-FR", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quand passa l'estacion espaciala dessús ieu", "lang": "oc-FR", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "qual i a a bòrd de l'EEI", "lang": "oc-FR", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "qual es a bòrd de l'EEI", "lang": "oc-FR", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "qual es dins l'EEI", "lang": "oc-FR", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quantas personas i a a bòrd de l'EEI", "lang": "oc-FR", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quantas personas son a bòrd de l'EEI", "lang": "oc-FR", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quantas personas i a dins l'EEI", "lang": "oc-FR", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}

@@ -1,0 +1,12 @@
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "anda tella tazeqqa n wallal tura", "lang": "kab", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "d acu-t amkan n tura n tazeqqa n wallal", "lang": "kab", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "ini-yi amkan n tazeqqa n wallal", "lang": "kab", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "melmi ara tili tazeqqa n wallal sennig nekk", "lang": "kab", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "melmi ara tettwali tikelt nniḍen tazeqqa n wallal sennig-i", "lang": "kab", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "melmi ara tɛeddi ISS ɣef", "lang": "kab", "intent_label": "when_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "anwa yellan deg tzeqqa n wallal ISS", "lang": "kab", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "anwa izedɣen deg tzeqqa n wallal ISS", "lang": "kab", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "anwa yellan ɣef tzeqqa n wallal ISS", "lang": "kab", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "acḥal n medden i yellan deg tzeqqa n wallal ISS", "lang": "kab", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "acḥal i yellan deg tzeqqa n wallal ISS", "lang": "kab", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "acḥal n medden i yellan deg ISS", "lang": "kab", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
