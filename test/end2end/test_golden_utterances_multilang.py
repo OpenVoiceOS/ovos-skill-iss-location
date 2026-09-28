@@ -47,6 +47,14 @@ NEGATIVE_UTTERANCES = [
     ("what's the weather like today", "en-US", "ovos-skill-weather.openvoiceos"),
     ("tell me a joke", "en-US", "ovos-skill-icanhazdadjokes.openvoiceos"),
     ("what's my ip address", "en-US", "ovos-skill-ip.openvoiceos"),
+    # One per phrase in the en-US <intent>.blacklist files. Each reads like
+    # the intent beside it and must still go to the other skill: the
+    # blacklist word is what keeps it away.
+    ("can you tell me where I am", "en-US", "ovos-skill-diagnostics.openvoiceos"),
+    ("show me where my phone is", "en-US", "ovos-skill-ip.openvoiceos"),
+    ("what time will the movie start tonight", "en-US", "ovos-skill-showtimes.openvoiceos"),
+    ("how many people live in this city", "en-US", "ovos-skill-wikipedia.openvoiceos"),
+    ("who is on board the flight", "en-US", "ovos-skill-flight-tracker.openvoiceos"),
 ]
 
 
