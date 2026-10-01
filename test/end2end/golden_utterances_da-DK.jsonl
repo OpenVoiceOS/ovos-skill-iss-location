@@ -9,3 +9,4 @@
 {"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hvor mange mennesker er der om bord på ISS", "lang": "da-DK", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hvor mange astronauter er der på ISS", "lang": "da-DK", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hvor mange mennesker er der i rummet lige nu", "lang": "da-DK", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "hvem er i rummet lige nu", "intent_label": "who_iss.intent", "intent_type": "padatious", "needs_manual": true, "lang": "da-DK", "machine_generated": true}
