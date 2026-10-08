@@ -9,3 +9,4 @@
 {"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quantas personas i a a bòrd de l'EEI", "lang": "oc-FR", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quantas personas son a bòrd de l'EEI", "lang": "oc-FR", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "quantas personas i a dins l'EEI", "lang": "oc-FR", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "ont es l'estacion espaciala ara", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": true, "lang": "oc-FR", "machine_generated": true}

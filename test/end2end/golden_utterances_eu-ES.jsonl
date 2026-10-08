@@ -9,3 +9,4 @@
 {"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "zenbat pertsona daude nazioarteko estazio espazialean", "lang": "eu-ES", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "zenbat astronauta daude ISSan", "lang": "eu-ES", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "zenbat pertsona daude orain espazioan", "lang": "eu-ES", "intent_label": "number_iss.intent", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-iss-location.openvoiceos", "utterance": "begira estazio espaziala non dagoen", "intent_label": "where_iss.intent", "intent_type": "padatious", "needs_manual": true, "lang": "eu-ES", "machine_generated": true}
