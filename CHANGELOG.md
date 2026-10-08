@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.1a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.7.1a2) (2026-10-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.7.1a1...0.7.1a2)
+
+**Merged pull requests:**
+
+- test: golden utterances for every intent in every shipped locale [\#121](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/121) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.7.1a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.7.1a1) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.7.0a6...0.7.1a1)
@@ -575,15 +583,10 @@
 **Merged pull requests:**
 
 - fix: optional gui and missing skilljson [\#19](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/19) ([JarbasAl](https://github.com/JarbasAl))
-- da-dk/translate [\#17](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/17) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.2.2a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.2a1) (2024-10-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.1...0.2.2a1)
-
-**Merged pull requests:**
-
-- de-de/translate [\#16](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/16) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [V0.2.1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.1) (2024-10-15)
 
