@@ -1,0 +1,17 @@
+{
+  "skill_id": "ovos-skill-iss-location.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-iss-location",
+  "name": "ISS jarraipena",
+  "description": "Jarraitu ISSaren kokapena",
+  "examples": [
+    "Non dago ISSa",
+    "Nor dago espazio-estazioan?",
+    "Noiz igaroko da ISSa",
+    "Kontatu iezadazu ISSari buruz",
+    "zenbat pertsona daude espazio-estazioan"
+  ],
+  "tags": [
+    "kuriositateak",
+    "espazioa"
+  ]
+}

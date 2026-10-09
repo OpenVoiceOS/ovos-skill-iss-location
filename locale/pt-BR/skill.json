@@ -1,0 +1,17 @@
+{
+  "skill_id": "ovos-skill-iss-location.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-iss-location",
+  "name": "Rastreador da ISS",
+  "description": "Acompanhe a localização da ISS",
+  "examples": [
+    "Onde está a ISS",
+    "Quem está a bordo da estação espacial?",
+    "Quando a ISS vai passar",
+    "Me conte sobre a ISS",
+    "quantas pessoas a bordo da estação espacial"
+  ],
+  "tags": [
+    "Trivia",
+    "espaço"
+  ]
+}
