@@ -1,0 +1,4 @@
+Jest na szerokości {latitude} i długości {longitude}, nad obszarem: {toponym}
+ISS jest na szerokości {latitude} i długości {longitude}, co odpowiada obszarowi: {toponym}
+Międzynarodowa stacja kosmiczna jest teraz nad obszarem: {toponym}, na szerokości {latitude} i długości {longitude}
+Stacja kosmiczna jest na szerokości {latitude} i długości {longitude}, nad obszarem: {toponym}

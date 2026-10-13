@@ -1,0 +1,15 @@
+{
+  "skill_id": "ovos-skill-iss-location.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-iss-location",
+  "name": "ISS Tracker",
+  "description": "موقعیت ISS را ردیابی کنید",
+  "examples": [
+    "ISS کجاست",
+    "چه کسانی در ایستگاه فضایی هستند",
+    "چند نفر در ISS هستند"
+  ],
+  "tags": [
+    "Trivia",
+    "space"
+  ]
+}
