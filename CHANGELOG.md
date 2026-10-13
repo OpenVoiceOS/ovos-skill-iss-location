@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.0a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.8.0a1) (2026-10-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.7.1a3...0.8.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): require the ISS name in where\_iss and when\_iss [\#125](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/125) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.7.1a3](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.7.1a3) (2026-10-09)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.7.1a2...0.7.1a3)
@@ -552,10 +560,6 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.3...0.2.4a1)
 
-**Merged pull requests:**
-
-- fix: gui images [\#22](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/22) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [V0.2.3](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.3) (2024-11-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.3...V0.2.3)
@@ -563,10 +567,6 @@
 ## [0.2.3](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.3) (2024-11-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.3a1...0.2.3)
-
-**Merged pull requests:**
-
-- Release 0.2.3a1 [\#21](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/21) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.2.3a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.3a1) (2024-11-16)
 
