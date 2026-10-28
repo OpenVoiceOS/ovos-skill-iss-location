@@ -1,0 +1,15 @@
+{
+  "skill_id": "ovos-skill-iss-location.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-iss-location",
+  "name": "Rastreador de la (ISS|EEI)",
+  "description": "Sigue la ubicación de la EEI",
+  "examples": [
+    "¿Dónde está la EEI?",
+    "cuantos astronautas hay en la ISS",
+    "Cuándo estará la EEI por encima de nosotros"
+  ],
+  "tags": [
+    "Curiosidades",
+    "espacio"
+  ]
+}

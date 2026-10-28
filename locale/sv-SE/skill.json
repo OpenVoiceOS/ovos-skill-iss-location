@@ -1,0 +1,17 @@
+{
+  "skill_id": "ovos-skill-iss-location.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-iss-location",
+  "name": "ISS Tracker",
+  "description": "Följ ISS position",
+  "examples": [
+    "Var är ISS",
+    "Vem är ombord på rymdstationen?",
+    "När passerar ISS",
+    "Berätta om ISS",
+    "hur många personer ombord på rymdstationen"
+  ],
+  "tags": [
+    "Trivia",
+    "rymden"
+  ]
+}
