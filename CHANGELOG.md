@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.0a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.8.0a2) (2026-10-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.8.0a1...0.8.0a2)
+
+**Merged pull requests:**
+
+- test: run the end2end suite on the m2v prototype pipeline [\#128](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/128) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.0a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.8.0a1) (2026-10-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.7.1a3...0.8.0a1)
@@ -540,10 +548,6 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/V0.2.4...0.2.5a1)
 
-**Merged pull requests:**
-
-- fix:allow workshop 3.0.0 [\#24](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/24) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [V0.2.4](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.4) (2024-11-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.4...V0.2.4)
@@ -551,10 +555,6 @@
 ## [0.2.4](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.4) (2024-11-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.4a1...0.2.4)
-
-**Merged pull requests:**
-
-- Release 0.2.4a1 [\#23](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/23) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.2.4a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.4a1) (2024-11-16)
 
