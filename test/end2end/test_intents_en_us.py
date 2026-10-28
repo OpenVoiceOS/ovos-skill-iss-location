@@ -13,14 +13,14 @@ happy-path return value by default, overridden with a raised
 then cover intent binding and dialog content deterministically, not "did a
 real network call happen to succeed".
 """
-import re
 import unittest
 from unittest.mock import patch
 
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
 from ovos_spec_tools import SpecMessage
-from ovoscope import CaptureSession, get_minicroft
+from ovoscope import CaptureSession
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 from ovos_skill_iss_location import ISSDataUnavailable
 
@@ -39,34 +39,10 @@ _FAKE_ISS_DATA = (
 )
 
 
-def _matches_intent(msg_type: str, skill_id: str, intent_file: str) -> bool:
-    """Check whether ``msg_type`` is the matched-intent event for
-    ``intent_file`` (eg. ``where_iss.intent``), tolerant of which pipeline
-    plugin matched it.
-
-    Different pipeline plugins (padatious vs padacioso) register intents
-    under different normalizations of the ``.intent`` filename basename —
-    observed variants include the basename with no extension and the
-    basename with the extension kept. Rather than pin one wire format
-    (which breaks the moment the matching plugin or its version changes),
-    compare case-insensitively against the basename with the extension
-    stripped from both sides.
-    """
-    prefix = f"{skill_id}:"
-    if not msg_type.startswith(prefix):
-        return False
-    observed = msg_type[len(prefix):]
-    observed_base = observed.rsplit(".", 1)[0] if observed.endswith(".intent") else observed
-    expected_base = intent_file.rsplit(".", 1)[0]
-    # normalize PascalCase/snake_case to a bare lowercase token for comparison
-    norm = lambda s: re.sub(r"[^a-z0-9]", "", s.lower())
-    return norm(observed_base) == norm(expected_base)
-
-
 class TestISSLocationIntentsEnUS(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.minicroft = get_minicroft([SKILL_ID])
+        cls.minicroft = get_prototype_minicroft([SKILL_ID], lang="en-US")
         # Stub the skill's one live-network fetch seam for the whole class:
         # happy-path canned data by default, overridden per-test (see
         # test_api_failure_speaks_gracefully) to exercise the failure path.
@@ -93,13 +69,7 @@ class TestISSLocationIntentsEnUS(unittest.TestCase):
 
     def _run(self, text, session_id="test-session"):
         session = Session(session_id)
-        session.pipeline = [
-            "ovos-adapt-pipeline-plugin-high",
-            "ovos-padacioso-pipeline-plugin-high",
-            "ovos-adapt-pipeline-plugin-medium",
-            "ovos-padacioso-pipeline-plugin-medium",
-            "ovos-adapt-pipeline-plugin-low",
-        ]
+        session.pipeline = PIPELINE
         utterance = Message(
             "recognizer_loop:utterance",
             {"utterances": [text], "lang": "en-US"},
@@ -112,10 +82,7 @@ class TestISSLocationIntentsEnUS(unittest.TestCase):
     def _assert_intent(self, text, intent, expected_dialog=None, expected_data=None):
         messages = self._run(text)
         types = [m.msg_type for m in messages]
-        self.assertTrue(
-            any(_matches_intent(t, SKILL_ID, intent) for t in types),
-            f"no message routed to {SKILL_ID}:{intent} ({types})",
-        )
+        TALLY.assert_routed(text, f"{SKILL_ID}:{intent}", types)
         self.assertIn(SpecMessage.SPEAK, types)
         speak_msgs = [m for m in messages if m.msg_type == SpecMessage.SPEAK]
         # A bare "speak was emitted" assertion is satisfied even when the
@@ -190,18 +157,13 @@ class TestISSLocationIntentsEnUS(unittest.TestCase):
         )
 
     def test_api_failure_speaks_gracefully(self):
-        """Reproduces the live ser9 finding: api.open-notify.org
-        intermittently returns an empty body, which used to raise a raw
-        JSONDecodeError out of the handler -- caught by ovos-workshop's
-        generic exception handler, which spoke the opaque "skill.error"
-        fallback dialog instead of anything meaningful. This must now
-        speak the skill's own "api_unavailable" dialog instead, and must
-        NOT hit the generic error path (no skill.error speak, no
-        handler-error bus event).
-        """
+        """An API failure speaks the skill's own api_unavailable dialog, not the
+        generic skill.error fallback, and puts no handler-error event on the bus."""
         self._get_iss_data_mock.side_effect = ISSDataUnavailable("simulated empty response body")
-        messages = self._run("who is on board the ISS", session_id="test-session-api-failure")
+        text = "who is on board the ISS"
+        messages = self._run(text, session_id="test-session-api-failure")
         types = [m.msg_type for m in messages]
+        TALLY.assert_routed(text, f"{SKILL_ID}:who_iss", types)
         speak_msgs = [m for m in messages if m.msg_type == SpecMessage.SPEAK]
         self.assertTrue(speak_msgs, f"no speak response for API failure ({types})")
         dialogs = [m.data.get("meta", {}).get("dialog") for m in speak_msgs]

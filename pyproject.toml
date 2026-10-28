@@ -27,8 +27,8 @@ gui = [
     "pillow",
 ]
 test = [
-    "ovoscope>=1.11.2a1",
-    "ovos-m2v-pipeline>=0.32.0a1",
+    "ovoscope>=1.12.1a1",
+    "ovos-m2v-pipeline>=0.37.3a1",
     "ovos-adapt-parser>=1.0.9,<2.0.0",
     "pytest",
     "pytest-timeout",
@@ -57,3 +57,6 @@ ovos_skill_iss_location = [
     "gui/**/*",
     "res/**/*",
 ]
+
+[tool.pytest.ini_options]
+ovoscope_min_routing_rate = 0.85
