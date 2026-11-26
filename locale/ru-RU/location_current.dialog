@@ -1,0 +1,4 @@
+Широта {latitude}, долгота {longitude}, под станцией: {toponym}
+МКС сейчас на широте {latitude} и долготе {longitude}, под ней: {toponym}
+Международная космическая станция сейчас над местом {toponym}, на широте {latitude} и долготе {longitude}
+Космическая станция находится на широте {latitude} и долготе {longitude}, под ней: {toponym}

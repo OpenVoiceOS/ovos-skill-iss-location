@@ -1,0 +1,15 @@
+{
+  "skill_id": "ovos-skill-iss-location.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-iss-location",
+  "name": "ISS Tracker",
+  "description": "Отслеживает местоположение МКС",
+  "examples": [
+    "где сейчас МКС",
+    "кто на борту МКС",
+    "сколько людей на борту космической станции"
+  ],
+  "tags": [
+    "Trivia",
+    "space"
+  ]
+}
