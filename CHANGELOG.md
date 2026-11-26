@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.1a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.8.1a1) (2026-11-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.8.0a2...0.8.1a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): drop dead vocabulary files [\#127](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/127) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.0a2](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.8.0a2) (2026-10-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.8.0a1...0.8.0a2)
@@ -520,17 +528,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.6a1...V0.2.6)
 
-**Merged pull requests:**
-
-- Release 0.2.6a1 [\#27](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/27) ([github-actions[bot]](https://github.com/apps/github-actions))
-
 ## [0.2.6a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.6a1) (2024-11-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.5...0.2.6a1)
-
-**Merged pull requests:**
-
-- da-dk/translate [\#26](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/26) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.2.5](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.5) (2024-11-19)
 
@@ -539,10 +539,6 @@
 ## [V0.2.5](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/V0.2.5) (2024-11-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-iss-location/compare/0.2.5a1...V0.2.5)
-
-**Merged pull requests:**
-
-- Release 0.2.5a1 [\#25](https://github.com/OpenVoiceOS/ovos-skill-iss-location/pull/25) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.2.5a1](https://github.com/OpenVoiceOS/ovos-skill-iss-location/tree/0.2.5a1) (2024-11-19)
 
